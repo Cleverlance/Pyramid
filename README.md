@@ -1,6 +1,6 @@
 # Pyramid
 
-[![CI Status](http://img.shields.io/travis/cleverlance/Pyramid.svg?style=flat)](https://travis-ci.org/cleverlance/Pyramid)
+[![CI Status](http://img.shields.io/travis/Cleverlance/Pyramid.svg?style=flat)](https://travis-ci.org/Cleverlance/Pyramid)
 [![Version](https://img.shields.io/cocoapods/v/Pyramid.svg?style=flat)](http://cocoapods.org/pods/Pyramid)
 [![License](https://img.shields.io/cocoapods/l/Pyramid.svg?style=flat)](http://cocoapods.org/pods/Pyramid)
 [![Platform](https://img.shields.io/cocoapods/p/Pyramid.svg?style=flat)](http://cocoapods.org/pods/Pyramid)
