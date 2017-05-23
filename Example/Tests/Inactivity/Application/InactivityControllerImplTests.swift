@@ -4,7 +4,7 @@
 
 import XCTest
 import Nimble
-@testable import Generic
+@testable import Pyramid
 
 class InactivityControllerImplTests: XCTestCase {
 
@@ -121,7 +121,7 @@ private var interactionNotifier: UserInteractionNotifierFake!
 private var lifecycleNotifier: AppLifecycleNotifierFake!
 
 private func controllerWith(
-    timer: Generic.Timer = TimerDummy(),
+    timer: Pyramid.Timer = TimerDummy(),
     config: InactivityConfiguration = InactivityConfigurationWith(
         backgroundTimeout: bgTimeout,
         foregroundTimeout: fgTimeout

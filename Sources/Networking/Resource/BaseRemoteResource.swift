@@ -11,7 +11,7 @@ open class BaseRemoteResource<
     ResponseModel, ResponseDto: Mappable,
     ErrorModel: Error, ErrorDto: Mappable
 >: Resource<RequestModel, ResponseModel, Tag>
-where Endpoint.Input == RequestModel {
+/* where Endpoint.Input == RequestModel */ { // FIXME: this causes segfault
 
     private let client: NetworkClient
     private let config: RemoteResourceConfig
@@ -70,7 +70,7 @@ where Endpoint.Input == RequestModel {
 
     open func createNetworkRequest(_ request: RequestModel) throws -> NetworkRequest {
         return NetworkRequest(
-            url: config.baseUrl() + Endpoint.path(for: request),
+            url: config.baseUrl() + Endpoint.path(for: request as! Endpoint.Input),
             method: Endpoint.method,
             contentType: Endpoint.contentType,
             headers: Endpoint.requestHeaders,

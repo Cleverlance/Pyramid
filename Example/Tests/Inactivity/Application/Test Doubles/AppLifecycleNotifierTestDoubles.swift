@@ -2,7 +2,7 @@
 //  Copyright © 2016 Cleverlance. All rights reserved.
 //
 
-import Generic
+import Pyramid
 
 class AppLifecycleNotifierFake: AppLifecycleNotifier {
     var didBecomeActiveEvent: Event { return _didBecomeActiveEvent }

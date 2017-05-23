@@ -7,20 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		757B4A1B653F9190DAA158F4 /* Pods_Pyramid_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB407CE1BA144CA5ABCEB173 /* Pods_Pyramid_Tests.framework */; };
+		CD4E10EF1ED3FA4500AB1F5D /* InactivityControllerImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E10E91ED3FA4500AB1F5D /* InactivityControllerImplTests.swift */; };
+		CD4E10F01ED3FA4500AB1F5D /* AppLifecycleNotifierTestDoubles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E10EB1ED3FA4500AB1F5D /* AppLifecycleNotifierTestDoubles.swift */; };
+		CD4E10F11ED3FA4500AB1F5D /* InactivityNotifierConfigurationTestDoubles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E10EC1ED3FA4500AB1F5D /* InactivityNotifierConfigurationTestDoubles.swift */; };
+		CD4E10F21ED3FA4500AB1F5D /* TimerTestDoubles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E10ED1ED3FA4500AB1F5D /* TimerTestDoubles.swift */; };
+		CD4E10F31ED3FA4500AB1F5D /* UserInteractionNotifierTestDoubles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E10EE1ED3FA4500AB1F5D /* UserInteractionNotifierTestDoubles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		12DD7C2F0EC508A565EEBC66 /* Pods-Pyramid_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pyramid_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pyramid_Tests/Pods-Pyramid_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* Pyramid_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Pyramid_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		65954FD9A87E379DC6F18944 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		65954FD9A87E379DC6F18944 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		9025D3A0ADB2920269E2100F /* Pods-Pyramid_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pyramid_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pyramid_Tests/Pods-Pyramid_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		B7B777C1D29B84346CB8CBF9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		B7B777C1D29B84346CB8CBF9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		CD4E10E91ED3FA4500AB1F5D /* InactivityControllerImplTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InactivityControllerImplTests.swift; sourceTree = "<group>"; };
+		CD4E10EB1ED3FA4500AB1F5D /* AppLifecycleNotifierTestDoubles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLifecycleNotifierTestDoubles.swift; sourceTree = "<group>"; };
+		CD4E10EC1ED3FA4500AB1F5D /* InactivityNotifierConfigurationTestDoubles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InactivityNotifierConfigurationTestDoubles.swift; sourceTree = "<group>"; };
+		CD4E10ED1ED3FA4500AB1F5D /* TimerTestDoubles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerTestDoubles.swift; sourceTree = "<group>"; };
+		CD4E10EE1ED3FA4500AB1F5D /* UserInteractionNotifierTestDoubles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInteractionNotifierTestDoubles.swift; sourceTree = "<group>"; };
 		EB407CE1BA144CA5ABCEB173 /* Pods_Pyramid_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pyramid_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F66328D1D37FAEA49B9A678D /* Pyramid.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = Pyramid.podspec; path = ../Pyramid.podspec; sourceTree = "<group>"; };
+		F66328D1D37FAEA49B9A678D /* Pyramid.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Pyramid.podspec; path = ../Pyramid.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +65,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				CD4E10E71ED3FA4500AB1F5D /* Inactivity */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -87,6 +95,34 @@
 				EB407CE1BA144CA5ABCEB173 /* Pods_Pyramid_Tests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD4E10E71ED3FA4500AB1F5D /* Inactivity */ = {
+			isa = PBXGroup;
+			children = (
+				CD4E10E81ED3FA4500AB1F5D /* Application */,
+			);
+			path = Inactivity;
+			sourceTree = "<group>";
+		};
+		CD4E10E81ED3FA4500AB1F5D /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				CD4E10E91ED3FA4500AB1F5D /* InactivityControllerImplTests.swift */,
+				CD4E10EA1ED3FA4500AB1F5D /* Test Doubles */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		CD4E10EA1ED3FA4500AB1F5D /* Test Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				CD4E10EB1ED3FA4500AB1F5D /* AppLifecycleNotifierTestDoubles.swift */,
+				CD4E10EC1ED3FA4500AB1F5D /* InactivityNotifierConfigurationTestDoubles.swift */,
+				CD4E10ED1ED3FA4500AB1F5D /* TimerTestDoubles.swift */,
+				CD4E10EE1ED3FA4500AB1F5D /* UserInteractionNotifierTestDoubles.swift */,
+			);
+			path = "Test Doubles";
 			sourceTree = "<group>";
 		};
 		FE230B6B3443CAE9C61E6D28 /* Pods */ = {
@@ -131,10 +167,6 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					607FACCF1AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0820;
-					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 0820;
@@ -223,7 +255,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				CD4E10F21ED3FA4500AB1F5D /* TimerTestDoubles.swift in Sources */,
+				CD4E10EF1ED3FA4500AB1F5D /* InactivityControllerImplTests.swift in Sources */,
+				CD4E10F01ED3FA4500AB1F5D /* AppLifecycleNotifierTestDoubles.swift in Sources */,
+				CD4E10F31ED3FA4500AB1F5D /* UserInteractionNotifierTestDoubles.swift in Sources */,
+				CD4E10F11ED3FA4500AB1F5D /* InactivityNotifierConfigurationTestDoubles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
