@@ -4,27 +4,21 @@
 
 import ObjectMapper
 
-open class BaseRemoteResource<
-    Tag,
-    Endpoint: RemoteEndpoint,
-    RequestModel, RequestDto: Mappable,
-    ResponseModel, ResponseDto: Mappable,
-    ErrorModel: Error, ErrorDto: Mappable
->: TaggedOperation<RequestModel, ResponseModel, Tag>
-/* where Endpoint.Input == RequestModel */ { // FIXME: this causes segfault
-
+open class BaseRemoteResource<Endpoint: RemoteEndpoint, Tag>: TaggedOperation<
+    Endpoint.Input, Endpoint.Output, Tag
+> {
     private let client: NetworkClient
     private let config: RemoteResourceConfig
-    private let requestConverter: Converter<RequestModel, RequestDto>
-    private let responseConverter: Converter<ResponseDto, ResponseModel>
-    private let errorConverter: Converter<ErrorDto, ErrorModel>
+    private let requestConverter: Converter<Endpoint.Input, Endpoint.InputDto>
+    private let responseConverter: Converter<Endpoint.OutputDto, Endpoint.Output>
+    private let errorConverter: Converter<Endpoint.ErrorDto, Endpoint.ErrorModel>
 
     public init(
         client: NetworkClient,
         config: RemoteResourceConfig,
-        requestConverter: Converter<RequestModel, RequestDto>,
-        responseConverter: Converter<ResponseDto, ResponseModel>,
-        errorConverter: Converter<ErrorDto, ErrorModel>
+        requestConverter: Converter<Endpoint.Input, Endpoint.InputDto>,
+        responseConverter: Converter<Endpoint.OutputDto, Endpoint.Output>,
+        errorConverter: Converter<Endpoint.ErrorDto, Endpoint.ErrorModel>
     ) {
         self.client = client
         self.config = config
@@ -33,7 +27,7 @@ open class BaseRemoteResource<
         self.errorConverter = errorConverter
     }
 
-    open override func execute(with request: RequestModel) throws -> ResponseModel {
+    open override func execute(with request: Endpoint.Input) throws -> Endpoint.Output {
         let networkRequest = try createNetworkRequest(request)
         let response = try fetchResponseForRequest(networkRequest)
 
@@ -44,8 +38,8 @@ open class BaseRemoteResource<
         return try parseModelFromResponse(response)
     }
 
-    private func parseModelFromResponse(_ response: NetworkResponse) throws -> ResponseModel {
-        if let responseDto = Mapper<ResponseDto>().map(JSONObject: response.body),
+    private func parseModelFromResponse(_ response: NetworkResponse) throws -> Endpoint.Output {
+        if let responseDto = Mapper<Endpoint.OutputDto>().map(JSONObject: response.body),
            let response = try? responseConverter.convert(responseDto) {
             return response
         } else {
@@ -55,7 +49,7 @@ open class BaseRemoteResource<
 
     private func checkReponseForBusinessError(_ response: NetworkResponse) throws {
         if let
-            errorDto = Mapper<ErrorDto>().map(JSONObject: response.body),
+            errorDto = Mapper<Endpoint.ErrorDto>().map(JSONObject: response.body),
             let error = try? errorConverter.convert(errorDto) {
 
             throw error
@@ -68,9 +62,9 @@ open class BaseRemoteResource<
         }
     }
 
-    open func createNetworkRequest(_ request: RequestModel) throws -> NetworkRequest {
+    open func createNetworkRequest(_ request: Endpoint.Input) throws -> NetworkRequest {
         return NetworkRequest(
-            url: config.baseUrl() + Endpoint.path(for: request as! Endpoint.Input),
+            url: config.baseUrl() + Endpoint.path(for: request),
             method: Endpoint.method,
             contentType: Endpoint.contentType,
             headers: Endpoint.requestHeaders,

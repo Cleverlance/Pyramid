@@ -2,23 +2,20 @@
 //  Copyright © 2016 Cleverlance. All rights reserved.
 //
 
+import ObjectMapper
+
 public protocol RemoteEndpoint {
     associatedtype Input
-    static func path(for: Input) -> String
+    associatedtype InputDto: Mappable
+    associatedtype Output
+    associatedtype OutputDto: Mappable
+    associatedtype ErrorModel: Error
+    associatedtype ErrorDto: Mappable
 
     static var method: RequestMethod { get }
     static var contentType: ContentType { get }
     static var requestHeaders: RequestHeaders? { get }
-}
-
-public extension RemoteEndpoint {
-    static var contentType: ContentType {
-        switch method {
-        case .post, .put, .delete: return .json
-        case .get: return .wwwFormUrlEncoded
-        }
-    }
-    static var requestHeaders: RequestHeaders? { return ["format": "json"] }
+    static func path(for: Input) -> String
 }
 
 public protocol SimpleRemoteEndpoint: RemoteEndpoint {
