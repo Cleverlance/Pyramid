@@ -42,6 +42,7 @@
 		CD4E117D1ED42C8900AB1F5D /* NetworkClientConfigTestDoubles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E117C1ED42C8900AB1F5D /* NetworkClientConfigTestDoubles.swift */; };
 		CD4E11821ED42E1700AB1F5D /* NetworkClientTestDoubles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E11801ED42E1700AB1F5D /* NetworkClientTestDoubles.swift */; };
 		CD4E11831ED42E1700AB1F5D /* RemoteResourceConfigTestDoubles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E11811ED42E1700AB1F5D /* RemoteResourceConfigTestDoubles.swift */; };
+		CD4E11871ED4378500AB1F5D /* SwinjectExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E11861ED4378500AB1F5D /* SwinjectExtensionsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +86,7 @@
 		CD4E117C1ED42C8900AB1F5D /* NetworkClientConfigTestDoubles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClientConfigTestDoubles.swift; sourceTree = "<group>"; };
 		CD4E11801ED42E1700AB1F5D /* NetworkClientTestDoubles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClientTestDoubles.swift; sourceTree = "<group>"; };
 		CD4E11811ED42E1700AB1F5D /* RemoteResourceConfigTestDoubles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteResourceConfigTestDoubles.swift; sourceTree = "<group>"; };
+		CD4E11861ED4378500AB1F5D /* SwinjectExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwinjectExtensionsTests.swift; sourceTree = "<group>"; };
 		EB407CE1BA144CA5ABCEB173 /* Pods_Pyramid_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pyramid_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F66328D1D37FAEA49B9A678D /* Pyramid.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Pyramid.podspec; path = ../Pyramid.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -207,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				CD4E10FB1ED4132F00AB1F5D /* SwinejctFactoryTests.swift */,
+				CD4E11861ED4378500AB1F5D /* SwinjectExtensionsTests.swift */,
 			);
 			path = Injection;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 				CD4E10F21ED3FA4500AB1F5D /* TimerTestDoubles.swift in Sources */,
 				CD4E11601ED4296100AB1F5D /* NotificationCenterImplTests.swift in Sources */,
 				CD4E115F1ED4296100AB1F5D /* EventCenterImplTests.swift in Sources */,
+				CD4E11871ED4378500AB1F5D /* SwinjectExtensionsTests.swift in Sources */,
 				CD4E11741ED4296C00AB1F5D /* URLRequestFactoryTests.swift in Sources */,
 				CD4E10EF1ED3FA4500AB1F5D /* InactivityControllerImplTests.swift in Sources */,
 				CD4E11731ED4296C00AB1F5D /* SyncNetworkClientTests.swift in Sources */,
