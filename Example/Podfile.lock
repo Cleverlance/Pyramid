@@ -3,11 +3,9 @@ PODS:
   - ObjectMapper (2.2.6)
   - Pyramid (0.1.0):
     - ObjectMapper (~> 2.0)
-    - ReachabilitySwift (~> 3.0)
     - Swinject (~> 2.0)
     - SwinjectAutoregistration
   - Quick (1.0.0)
-  - ReachabilitySwift (3)
   - Swinject (2.0.0)
   - SwinjectAutoregistration (2.0.1):
     - Swinject (~> 2.0.0)
@@ -24,9 +22,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
   ObjectMapper: 042708195cc46c20871cbcbec0453826398273fd
-  Pyramid: 91617670e9de99c5d1f7af17e45ab44aeed30927
+  Pyramid: 9e3b1c133c0d210834a5c9b3a28ce2e58ac05a1d
   Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
-  ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
   Swinject: 2e964a80d70ab09b3949c99032711f89147bfd60
   SwinjectAutoregistration: d19654c429354bad4b544c658dc92345ccdbb72c
 

@@ -18,5 +18,4 @@ Basic concepts for iOS app architecture.
   s.dependency 'Swinject', '~> 2.0'
   s.dependency 'SwinjectAutoregistration'
   s.dependency 'ObjectMapper', '~> 2.0'
-  s.dependency 'ReachabilitySwift', '~> 3.0'
 end

@@ -5,20 +5,16 @@
 import Swinject
 
 public final class GenericAssembly: CompositeAssembly {
+    public var assemblies: [Assembly] = [
+        LocalizerAssembly(),
+        CommandPatternAssembly(),
+        LoggerAssembly(),
+        NetworkingAssembly(),
+        TimerAssembly(),
+        InactivityAssembly(),
+        LocalStorageAssembly(),
+        AppVersionAssembly()
+    ]
 
-    public init() {
-        super.init(
-            assemblies: [
-                LocalizerAssembly(),
-                CommandPatternAssembly(),
-                LoggerAssembly(),
-                NetworkingAssembly(),
-                TimerAssembly(),
-                InactivityAssembly(),
-                LocalStorageAssembly(),
-                ReachabilityAssembly(),
-                AppVersionAssembly()
-            ]
-        )
-    }
+    public init() {}
 }

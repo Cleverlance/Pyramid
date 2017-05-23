@@ -4,14 +4,12 @@
 
 import Swinject
 
-open class CompositeAssembly: Assembly {
+public protocol CompositeAssembly: Assembly {
+    var assemblies: [Assembly] { get }
+    init()
+}
 
-    private let assemblies: [Assembly]
-
-    public init(assemblies: [Assembly]) {
-        self.assemblies = assemblies
-    }
-
+extension CompositeAssembly {
     public func assemble(container: Container) {
         assemblies.forEach { $0.assemble(container: container) }
     }

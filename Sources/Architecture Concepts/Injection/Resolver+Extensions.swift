@@ -7,6 +7,6 @@ import Swinject
 public extension Resolver {
 
     public func ensureSingletonLoaded<T>(type: T.Type) {
-        let _ = resolve(type)
+        _ = resolve(type)
     }
 }
