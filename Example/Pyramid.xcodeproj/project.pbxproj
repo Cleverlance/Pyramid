@@ -47,10 +47,12 @@
 
 /* Begin PBXFileReference section */
 		12DD7C2F0EC508A565EEBC66 /* Pods-Pyramid_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pyramid_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pyramid_Tests/Pods-Pyramid_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		288949172314C485BBC7209F /* Pods-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.release.xcconfig"; path = "Pods/Target Support Files/Pods-test/Pods-test.release.xcconfig"; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* Pyramid_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Pyramid_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65954FD9A87E379DC6F18944 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		9025D3A0ADB2920269E2100F /* Pods-Pyramid_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pyramid_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pyramid_Tests/Pods-Pyramid_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		AF33F91A241F70E0BDDBCFFE /* Pods_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7B777C1D29B84346CB8CBF9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		CD4E10E91ED3FA4500AB1F5D /* InactivityControllerImplTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InactivityControllerImplTests.swift; sourceTree = "<group>"; };
 		CD4E10EB1ED3FA4500AB1F5D /* AppLifecycleNotifierTestDoubles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLifecycleNotifierTestDoubles.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		CD4E11811ED42E1700AB1F5D /* RemoteResourceConfigTestDoubles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteResourceConfigTestDoubles.swift; sourceTree = "<group>"; };
 		CD4E11861ED4378500AB1F5D /* SwinjectExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwinjectExtensionsTests.swift; sourceTree = "<group>"; };
 		EB407CE1BA144CA5ABCEB173 /* Pods_Pyramid_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pyramid_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2F3C580CC18B1F71A2E5881 /* Pods-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-test/Pods-test.debug.xcconfig"; sourceTree = "<group>"; };
 		F66328D1D37FAEA49B9A678D /* Pyramid.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Pyramid.podspec; path = ../Pyramid.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				EB407CE1BA144CA5ABCEB173 /* Pods_Pyramid_Tests.framework */,
+				AF33F91A241F70E0BDDBCFFE /* Pods_test.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -412,6 +416,8 @@
 			children = (
 				9025D3A0ADB2920269E2100F /* Pods-Pyramid_Tests.debug.xcconfig */,
 				12DD7C2F0EC508A565EEBC66 /* Pods-Pyramid_Tests.release.xcconfig */,
+				F2F3C580CC18B1F71A2E5881 /* Pods-test.debug.xcconfig */,
+				288949172314C485BBC7209F /* Pods-test.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -445,7 +451,7 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
