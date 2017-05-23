@@ -10,7 +10,7 @@ open class BaseRemoteResource<
     RequestModel, RequestDto: Mappable,
     ResponseModel, ResponseDto: Mappable,
     ErrorModel: Error, ErrorDto: Mappable
->: Resource<RequestModel, ResponseModel, Tag>
+>: TaggedOperation<RequestModel, ResponseModel, Tag>
 /* where Endpoint.Input == RequestModel */ { // FIXME: this causes segfault
 
     private let client: NetworkClient
@@ -33,7 +33,7 @@ open class BaseRemoteResource<
         self.errorConverter = errorConverter
     }
 
-    open override func makeRequest(_ request: RequestModel) throws -> ResponseModel {
+    open override func execute(with request: RequestModel) throws -> ResponseModel {
         let networkRequest = try createNetworkRequest(request)
         let response = try fetchResponseForRequest(networkRequest)
 

@@ -15,9 +15,9 @@ internal final class BackgroundExecutor: Executor {
         DispatchQueue.global(qos: .default).async {
             do {
                 let response = try command.execute()
-                completion(.success(response: response))
+                completion(.success(response))
             } catch {
-                completion(.failure(error: error))
+                completion(.failure(error))
             }
         }
     }

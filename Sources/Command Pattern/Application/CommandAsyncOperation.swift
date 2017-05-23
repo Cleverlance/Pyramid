@@ -2,10 +2,10 @@
 //  Copyright © 2015 Cleverlance. All rights reserved.
 //
 
-public class CommandAsyncUsecase<Input, Output, AsyncTag, ReceiverTag>
-: AsyncUsecase<Input, Output, AsyncTag> {
+public class CommandAsyncOperation<Input, Output, AsyncTag, ReceiverTag>
+: TaggedAsyncOperation<Input, Output, AsyncTag> {
 
-    public typealias Receiver = Usecase<Input, Output, ReceiverTag>
+    public typealias Receiver = TaggedOperation<Input, Output, ReceiverTag>
 
     private let receiver: Receiver
     private let invoker: Invoker
@@ -15,7 +15,7 @@ public class CommandAsyncUsecase<Input, Output, AsyncTag, ReceiverTag>
         self.invoker = invoker
     }
 
-    public override func execute(_ request: Input, completion: @escaping (Result<Output>) -> Void) {
+    public override func execute(with request: Input, completion: @escaping (Result<Output>) -> Void) {
         let command = Command(
             receiver: receiver,
             request: request,

@@ -14,15 +14,9 @@ open class CollectionRepository<Model>: AbstractClass, CollectionRepositoryType 
 
     public init() {}
 
-    open func add(_ model: Model) throws {
-        return markMethodAsVirtual()
-    }
+    open func add(_ model: Model) throws { virtualMethod }
 
-    open func loadAll() throws -> [Model] {
-        return markMethodAsVirtual()
-    }
+    open func loadAll() throws -> [Model] { virtualMethod }
 
-    open func deleteAll() throws {
-        return markMethodAsVirtual()
-    }
+    open func deleteAll() throws { virtualMethod }
 }

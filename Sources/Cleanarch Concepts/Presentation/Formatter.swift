@@ -13,17 +13,5 @@ public typealias Formatter<Model, ViewModel> = TaggedFormatter<Model, ViewModel,
 open class TaggedFormatter<Model, ViewModel, Tag>: AbstractClass, FormatterType {
     public init() {}
 
-    open func format(_ model: Model) -> ViewModel {
-        return markMethodAsVirtual()
-    }
-}
-
-public extension TaggedFormatter {
-    public func formatOrNil(_ model: Model?) -> ViewModel? {
-        if let model = model {
-            return format(model)
-        } else {
-            return nil
-        }
-    }
+    open func format(_ model: Model) -> ViewModel { virtualMethod }
 }

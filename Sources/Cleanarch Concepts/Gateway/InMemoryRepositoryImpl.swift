@@ -2,7 +2,7 @@
 //  Copyright © 2016 Cleverlance. All rights reserved.
 //
 
-public class InMemoryResourceImpl<Model>: StoreResource<Model> {
+public class InMemoryRepositoryImpl<Model>: Repository<Model> {
 
     public override init() {}
 

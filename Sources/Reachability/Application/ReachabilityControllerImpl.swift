@@ -3,9 +3,9 @@
 //
 
 internal final class ReachabilityControllerImpl: ReachabilityController {
-    private let checkReachability: ReachabilityUsecase
+    private let checkReachability: ReachabilityOperation
 
-    init(checkReachability: ReachabilityUsecase) {
+    init(checkReachability: ReachabilityOperation) {
         self.checkReachability = checkReachability
     }
 

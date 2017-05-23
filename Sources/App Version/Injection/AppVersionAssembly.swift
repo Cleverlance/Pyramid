@@ -8,11 +8,8 @@ final class AppVersionAssembly: Assembly {
 
     func assemble(container: Container) {
 
-        container.register(AppVersionGetterUsecase.self) { r in
-            ServiceWrappingUsecase(service: r.resolve(AppVersionGetterService.self)!)
-        }
-        container.register(AppVersionGetterService.self) { _ in
-            AppVersionGetterPlatformServiceImpl()
+        container.register(AppVersionGetterOperation.self) { _ in
+            AppVersionGetterPlatformOperationImpl()
         }
     }
 }

@@ -4,9 +4,9 @@
 
 import ObjectMapper
 
-public final class LocalStoreResourceImpl<
+public final class LocalRepositoryImpl<
     Params: LocalStoreParams, Model, Dto: Mappable
->: StoreResource<Model> {
+>: Repository<Model> {
 
     private let store: LocalStore
     private let externalConverter: Converter<Model, Dto>

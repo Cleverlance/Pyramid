@@ -11,7 +11,5 @@ public class InstanceProvider<Type>: AbstractClass, InstanceProviderType {
 
     public init() {}
 
-    public func getInstance() -> Type {
-        return markMethodAsVirtual()
-    }
+    public func getInstance() -> Type { virtualMethod }
 }

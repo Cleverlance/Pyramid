@@ -4,7 +4,7 @@
 
 internal class Command<Request, Response, Tag>: CommandType {
 
-    typealias Receiver = Usecase<Request, Response, Tag>
+    typealias Receiver = TaggedOperation<Request, Response, Tag>
 
     private let receiver: Receiver
     let request: Request
@@ -21,7 +21,7 @@ internal class Command<Request, Response, Tag>: CommandType {
     }
 
     func execute() throws -> Response {
-        return try receiver.execute(request)
+        return try receiver.execute(with: request)
     }
 
     func complete(_ result: Result<Response>) {

@@ -4,9 +4,9 @@
 
 import ObjectMapper
 
-public final class LocalCollectionCollectionStoreResourceImpl<
+public final class LocalCollectionRepositoryImpl<
     Params: LocalStoreParams, Model, Dto: Mappable
->: CollectionStoreResource<Model> {
+>: CollectionRepository<Model> {
 
     private let mapper = Mapper<Dto>()
 

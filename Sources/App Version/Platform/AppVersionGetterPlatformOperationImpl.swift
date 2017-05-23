@@ -2,9 +2,9 @@
 //  Copyright © 2016 Cleverlance. All rights reserved.
 //
 
-internal final class AppVersionGetterPlatformServiceImpl: AppVersionGetterService {
+internal final class AppVersionGetterPlatformOperationImpl: AppVersionGetterOperation {
 
-    override func execute(_: NoInput) throws -> AppVersion {
+    override func execute(with _: Empty) throws -> AppVersion {
         let string = Bundle.main
             .object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
 

@@ -70,8 +70,8 @@ final class NetworkingAssembly: Assembly {
         }
 
         container.register(EmptyDtoDomainConverter.self) { _ in EmptyDtoDomainConverterImpl() }
-        container.register(EmptyRequestExternalConverter<EmptyRequest>.self) { _ in
-            EmptyRequestExternalConverterImpl<EmptyRequest>()
+        container.register(EmptyRequestExternalConverter<Empty>.self) { _ in
+            EmptyRequestExternalConverterImpl<Empty>()
         }
 
         container.register(NetworkClientConfig.self) { _ in networkClientConfig }

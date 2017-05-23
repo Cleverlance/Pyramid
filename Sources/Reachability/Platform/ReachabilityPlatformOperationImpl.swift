@@ -4,9 +4,9 @@
 
 import ReachabilitySwift
 
-internal final class ReachabilityPlatformServiceImpl: ReachabilityService {
+internal final class ReachabilityPlatformOperationImpl: ReachabilityOperation {
 
-    override func execute(_: NoInput) throws -> Bool {
+    override func execute(with _: Empty) throws -> Bool {
         guard let reachability = Reachability(hostname: "https://google.cz") else {
             throw ReachabilityError.FailedToCreateWithHostname("https://google.cz")
         }

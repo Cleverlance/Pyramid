@@ -13,11 +13,8 @@ internal final class ReachabilityAssembly: Assembly {
             initializer: ReachabilityControllerImpl.init
         ).inObjectScope(.container)
 
-        container.register(ReachabilityUsecase.self) { r in
-            ServiceWrappingUsecase(service: r.resolve(ReachabilityService.self)!)
-        }
-        container.register(ReachabilityService.self) { _ in
-            ReachabilityPlatformServiceImpl()
+        container.register(ReachabilityOperation.self) { _ in
+            ReachabilityPlatformOperationImpl()
         }
     }
 }

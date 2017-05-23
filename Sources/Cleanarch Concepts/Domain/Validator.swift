@@ -12,7 +12,5 @@ open class Validator<Input, Model>: AbstractClass, ValidatorType {
 
     public init() {}
 
-    open func validate(input: Input) -> Bool {
-        return markMethodAsVirtual()
-    }
+    open func validate(input: Input) -> Bool { virtualMethod }
 }
