@@ -15,6 +15,33 @@
 		CD4E10F31ED3FA4500AB1F5D /* UserInteractionNotifierTestDoubles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E10EE1ED3FA4500AB1F5D /* UserInteractionNotifierTestDoubles.swift */; };
 		CD4E10FE1ED4132F00AB1F5D /* SwinejctFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E10FB1ED4132F00AB1F5D /* SwinejctFactoryTests.swift */; };
 		CD4E10FF1ED4132F00AB1F5D /* UIViewControllerPresenterSupportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E10FD1ED4132F00AB1F5D /* UIViewControllerPresenterSupportTests.swift */; };
+		CD4E110B1ED420B900AB1F5D /* AsyncOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E110A1ED420B900AB1F5D /* AsyncOperationTests.swift */; };
+		CD4E11101ED4232000AB1F5D /* ResultCachingOperationImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E110F1ED4232000AB1F5D /* ResultCachingOperationImplTests.swift */; };
+		CD4E11151ED427FF00AB1F5D /* ResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E11141ED427FF00AB1F5D /* ResultTests.swift */; };
+		CD4E11171ED4286600AB1F5D /* BasePresenterImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E11161ED4286600AB1F5D /* BasePresenterImplTests.swift */; };
+		CD4E11221ED428AD00AB1F5D /* InstanceProviderImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E111B1ED428AD00AB1F5D /* InstanceProviderImplTests.swift */; };
+		CD4E11231ED428AD00AB1F5D /* ScopeControllerImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E111C1ED428AD00AB1F5D /* ScopeControllerImplTests.swift */; };
+		CD4E11241ED428AD00AB1F5D /* ScopeControlerTestDoubles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E111E1ED428AD00AB1F5D /* ScopeControlerTestDoubles.swift */; };
+		CD4E11251ED428AD00AB1F5D /* ScopeTestDoubles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E111F1ED428AD00AB1F5D /* ScopeTestDoubles.swift */; };
+		CD4E11261ED428AD00AB1F5D /* AssemblerScopeImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E11211ED428AD00AB1F5D /* AssemblerScopeImplTests.swift */; };
+		CD4E112C1ED4294400AB1F5D /* ApplicationScopeControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E11291ED4294400AB1F5D /* ApplicationScopeControllerTests.swift */; };
+		CD4E11571ED4295A00AB1F5D /* LoggerFakes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E11511ED4295A00AB1F5D /* LoggerFakes.swift */; };
+		CD4E11581ED4295A00AB1F5D /* LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E11521ED4295A00AB1F5D /* LoggerTests.swift */; };
+		CD4E115A1ED4295A00AB1F5D /* ConsoleLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E11561ED4295A00AB1F5D /* ConsoleLoggerTests.swift */; };
+		CD4E115F1ED4296100AB1F5D /* EventCenterImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E115D1ED4296100AB1F5D /* EventCenterImplTests.swift */; };
+		CD4E11601ED4296100AB1F5D /* NotificationCenterImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E115E1ED4296100AB1F5D /* NotificationCenterImplTests.swift */; };
+		CD4E11701ED4296C00AB1F5D /* JSONDataSerializationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E11671ED4296C00AB1F5D /* JSONDataSerializationTests.swift */; };
+		CD4E11711ED4296C00AB1F5D /* StringDataSerializationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E11681ED4296C00AB1F5D /* StringDataSerializationTests.swift */; };
+		CD4E11721ED4296C00AB1F5D /* HTTPURLResponseProcessorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E11691ED4296C00AB1F5D /* HTTPURLResponseProcessorTests.swift */; };
+		CD4E11731ED4296C00AB1F5D /* SyncNetworkClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E116A1ED4296C00AB1F5D /* SyncNetworkClientTests.swift */; };
+		CD4E11741ED4296C00AB1F5D /* URLRequestFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E116B1ED4296C00AB1F5D /* URLRequestFactoryTests.swift */; };
+		CD4E11751ED4296C00AB1F5D /* BaseRemoteResourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E116D1ED4296C00AB1F5D /* BaseRemoteResourceTests.swift */; };
+		CD4E11761ED4296C00AB1F5D /* NetworkResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E116E1ED4296C00AB1F5D /* NetworkResponseTests.swift */; };
+		CD4E11791ED4297600AB1F5D /* ArgumentCheckingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E11781ED4297600AB1F5D /* ArgumentCheckingTests.swift */; };
+		CD4E117B1ED42B1800AB1F5D /* TestLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E117A1ED42B1800AB1F5D /* TestLogger.swift */; };
+		CD4E117D1ED42C8900AB1F5D /* NetworkClientConfigTestDoubles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E117C1ED42C8900AB1F5D /* NetworkClientConfigTestDoubles.swift */; };
+		CD4E11821ED42E1700AB1F5D /* NetworkClientTestDoubles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E11801ED42E1700AB1F5D /* NetworkClientTestDoubles.swift */; };
+		CD4E11831ED42E1700AB1F5D /* RemoteResourceConfigTestDoubles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E11811ED42E1700AB1F5D /* RemoteResourceConfigTestDoubles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +58,33 @@
 		CD4E10EE1ED3FA4500AB1F5D /* UserInteractionNotifierTestDoubles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInteractionNotifierTestDoubles.swift; sourceTree = "<group>"; };
 		CD4E10FB1ED4132F00AB1F5D /* SwinejctFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwinejctFactoryTests.swift; sourceTree = "<group>"; };
 		CD4E10FD1ED4132F00AB1F5D /* UIViewControllerPresenterSupportTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerPresenterSupportTests.swift; sourceTree = "<group>"; };
+		CD4E110A1ED420B900AB1F5D /* AsyncOperationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncOperationTests.swift; sourceTree = "<group>"; };
+		CD4E110F1ED4232000AB1F5D /* ResultCachingOperationImplTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultCachingOperationImplTests.swift; sourceTree = "<group>"; };
+		CD4E11141ED427FF00AB1F5D /* ResultTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTests.swift; sourceTree = "<group>"; };
+		CD4E11161ED4286600AB1F5D /* BasePresenterImplTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenterImplTests.swift; sourceTree = "<group>"; };
+		CD4E111B1ED428AD00AB1F5D /* InstanceProviderImplTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstanceProviderImplTests.swift; sourceTree = "<group>"; };
+		CD4E111C1ED428AD00AB1F5D /* ScopeControllerImplTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScopeControllerImplTests.swift; sourceTree = "<group>"; };
+		CD4E111E1ED428AD00AB1F5D /* ScopeControlerTestDoubles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScopeControlerTestDoubles.swift; sourceTree = "<group>"; };
+		CD4E111F1ED428AD00AB1F5D /* ScopeTestDoubles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScopeTestDoubles.swift; sourceTree = "<group>"; };
+		CD4E11211ED428AD00AB1F5D /* AssemblerScopeImplTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssemblerScopeImplTests.swift; sourceTree = "<group>"; };
+		CD4E11291ED4294400AB1F5D /* ApplicationScopeControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationScopeControllerTests.swift; sourceTree = "<group>"; };
+		CD4E11511ED4295A00AB1F5D /* LoggerFakes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerFakes.swift; sourceTree = "<group>"; };
+		CD4E11521ED4295A00AB1F5D /* LoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerTests.swift; sourceTree = "<group>"; };
+		CD4E11561ED4295A00AB1F5D /* ConsoleLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleLoggerTests.swift; sourceTree = "<group>"; };
+		CD4E115D1ED4296100AB1F5D /* EventCenterImplTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCenterImplTests.swift; sourceTree = "<group>"; };
+		CD4E115E1ED4296100AB1F5D /* NotificationCenterImplTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenterImplTests.swift; sourceTree = "<group>"; };
+		CD4E11671ED4296C00AB1F5D /* JSONDataSerializationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDataSerializationTests.swift; sourceTree = "<group>"; };
+		CD4E11681ED4296C00AB1F5D /* StringDataSerializationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringDataSerializationTests.swift; sourceTree = "<group>"; };
+		CD4E11691ED4296C00AB1F5D /* HTTPURLResponseProcessorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPURLResponseProcessorTests.swift; sourceTree = "<group>"; };
+		CD4E116A1ED4296C00AB1F5D /* SyncNetworkClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncNetworkClientTests.swift; sourceTree = "<group>"; };
+		CD4E116B1ED4296C00AB1F5D /* URLRequestFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestFactoryTests.swift; sourceTree = "<group>"; };
+		CD4E116D1ED4296C00AB1F5D /* BaseRemoteResourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRemoteResourceTests.swift; sourceTree = "<group>"; };
+		CD4E116E1ED4296C00AB1F5D /* NetworkResponseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponseTests.swift; sourceTree = "<group>"; };
+		CD4E11781ED4297600AB1F5D /* ArgumentCheckingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArgumentCheckingTests.swift; sourceTree = "<group>"; };
+		CD4E117A1ED42B1800AB1F5D /* TestLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestLogger.swift; sourceTree = "<group>"; };
+		CD4E117C1ED42C8900AB1F5D /* NetworkClientConfigTestDoubles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClientConfigTestDoubles.swift; sourceTree = "<group>"; };
+		CD4E11801ED42E1700AB1F5D /* NetworkClientTestDoubles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClientTestDoubles.swift; sourceTree = "<group>"; };
+		CD4E11811ED42E1700AB1F5D /* RemoteResourceConfigTestDoubles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteResourceConfigTestDoubles.swift; sourceTree = "<group>"; };
 		EB407CE1BA144CA5ABCEB173 /* Pods_Pyramid_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pyramid_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F66328D1D37FAEA49B9A678D /* Pyramid.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Pyramid.podspec; path = ../Pyramid.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +123,12 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				CD4E11771ED4297600AB1F5D /* Validation */,
+				CD4E11611ED4296C00AB1F5D /* Networking */,
+				CD4E115B1ED4296100AB1F5D /* Notification Center */,
+				CD4E114F1ED4295A00AB1F5D /* Logger */,
+				CD4E11271ED4294400AB1F5D /* Application Scope */,
+				CD4E11191ED428AD00AB1F5D /* Scope Management */,
 				CD4E10F91ED4132F00AB1F5D /* Architecture Concepts */,
 				CD4E10E71ED3FA4500AB1F5D /* Inactivity */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
@@ -133,6 +193,10 @@
 		CD4E10F91ED4132F00AB1F5D /* Architecture Concepts */ = {
 			isa = PBXGroup;
 			children = (
+				CD4E11181ED4286800AB1F5D /* Presentation */,
+				CD4E11131ED427F700AB1F5D /* Infrastructure */,
+				CD4E110E1ED4230D00AB1F5D /* DataAccess */,
+				CD4E11091ED420B900AB1F5D /* Application */,
 				CD4E10FA1ED4132F00AB1F5D /* Injection */,
 				CD4E10FC1ED4132F00AB1F5D /* View */,
 			);
@@ -153,6 +217,191 @@
 				CD4E10FD1ED4132F00AB1F5D /* UIViewControllerPresenterSupportTests.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CD4E11091ED420B900AB1F5D /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				CD4E110A1ED420B900AB1F5D /* AsyncOperationTests.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		CD4E110E1ED4230D00AB1F5D /* DataAccess */ = {
+			isa = PBXGroup;
+			children = (
+				CD4E110F1ED4232000AB1F5D /* ResultCachingOperationImplTests.swift */,
+			);
+			name = DataAccess;
+			sourceTree = "<group>";
+		};
+		CD4E11131ED427F700AB1F5D /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				CD4E11141ED427FF00AB1F5D /* ResultTests.swift */,
+			);
+			name = Infrastructure;
+			sourceTree = "<group>";
+		};
+		CD4E11181ED4286800AB1F5D /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				CD4E11161ED4286600AB1F5D /* BasePresenterImplTests.swift */,
+			);
+			name = Presentation;
+			sourceTree = "<group>";
+		};
+		CD4E11191ED428AD00AB1F5D /* Scope Management */ = {
+			isa = PBXGroup;
+			children = (
+				CD4E111A1ED428AD00AB1F5D /* Application */,
+				CD4E11201ED428AD00AB1F5D /* Injection */,
+			);
+			path = "Scope Management";
+			sourceTree = "<group>";
+		};
+		CD4E111A1ED428AD00AB1F5D /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				CD4E111B1ED428AD00AB1F5D /* InstanceProviderImplTests.swift */,
+				CD4E111C1ED428AD00AB1F5D /* ScopeControllerImplTests.swift */,
+				CD4E111D1ED428AD00AB1F5D /* TestDoubles */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		CD4E111D1ED428AD00AB1F5D /* TestDoubles */ = {
+			isa = PBXGroup;
+			children = (
+				CD4E111E1ED428AD00AB1F5D /* ScopeControlerTestDoubles.swift */,
+				CD4E111F1ED428AD00AB1F5D /* ScopeTestDoubles.swift */,
+			);
+			path = TestDoubles;
+			sourceTree = "<group>";
+		};
+		CD4E11201ED428AD00AB1F5D /* Injection */ = {
+			isa = PBXGroup;
+			children = (
+				CD4E11211ED428AD00AB1F5D /* AssemblerScopeImplTests.swift */,
+			);
+			path = Injection;
+			sourceTree = "<group>";
+		};
+		CD4E11271ED4294400AB1F5D /* Application Scope */ = {
+			isa = PBXGroup;
+			children = (
+				CD4E11281ED4294400AB1F5D /* Application */,
+			);
+			path = "Application Scope";
+			sourceTree = "<group>";
+		};
+		CD4E11281ED4294400AB1F5D /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				CD4E11291ED4294400AB1F5D /* ApplicationScopeControllerTests.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		CD4E114F1ED4295A00AB1F5D /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				CD4E11501ED4295A00AB1F5D /* Domain */,
+				CD4E11551ED4295A00AB1F5D /* Platform */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		CD4E11501ED4295A00AB1F5D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				CD4E11511ED4295A00AB1F5D /* LoggerFakes.swift */,
+				CD4E11521ED4295A00AB1F5D /* LoggerTests.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		CD4E11551ED4295A00AB1F5D /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				CD4E11561ED4295A00AB1F5D /* ConsoleLoggerTests.swift */,
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
+		CD4E115B1ED4296100AB1F5D /* Notification Center */ = {
+			isa = PBXGroup;
+			children = (
+				CD4E115C1ED4296100AB1F5D /* Application */,
+			);
+			path = "Notification Center";
+			sourceTree = "<group>";
+		};
+		CD4E115C1ED4296100AB1F5D /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				CD4E115D1ED4296100AB1F5D /* EventCenterImplTests.swift */,
+				CD4E115E1ED4296100AB1F5D /* NotificationCenterImplTests.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		CD4E11611ED4296C00AB1F5D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CD4E11801ED42E1700AB1F5D /* NetworkClientTestDoubles.swift */,
+				CD4E11811ED42E1700AB1F5D /* RemoteResourceConfigTestDoubles.swift */,
+				CD4E117C1ED42C8900AB1F5D /* NetworkClientConfigTestDoubles.swift */,
+				CD4E117A1ED42B1800AB1F5D /* TestLogger.swift */,
+				CD4E11641ED4296C00AB1F5D /* Platform */,
+				CD4E116C1ED4296C00AB1F5D /* Resource */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		CD4E11641ED4296C00AB1F5D /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				CD4E11651ED4296C00AB1F5D /* Client */,
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
+		CD4E11651ED4296C00AB1F5D /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				CD4E11661ED4296C00AB1F5D /* Data Serialization */,
+				CD4E11691ED4296C00AB1F5D /* HTTPURLResponseProcessorTests.swift */,
+				CD4E116A1ED4296C00AB1F5D /* SyncNetworkClientTests.swift */,
+				CD4E116B1ED4296C00AB1F5D /* URLRequestFactoryTests.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		CD4E11661ED4296C00AB1F5D /* Data Serialization */ = {
+			isa = PBXGroup;
+			children = (
+				CD4E11671ED4296C00AB1F5D /* JSONDataSerializationTests.swift */,
+				CD4E11681ED4296C00AB1F5D /* StringDataSerializationTests.swift */,
+			);
+			path = "Data Serialization";
+			sourceTree = "<group>";
+		};
+		CD4E116C1ED4296C00AB1F5D /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				CD4E116D1ED4296C00AB1F5D /* BaseRemoteResourceTests.swift */,
+				CD4E116E1ED4296C00AB1F5D /* NetworkResponseTests.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		CD4E11771ED4297600AB1F5D /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				CD4E11781ED4297600AB1F5D /* ArgumentCheckingTests.swift */,
+			);
+			path = Validation;
 			sourceTree = "<group>";
 		};
 		FE230B6B3443CAE9C61E6D28 /* Pods */ = {
@@ -285,13 +534,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD4E11701ED4296C00AB1F5D /* JSONDataSerializationTests.swift in Sources */,
+				CD4E11241ED428AD00AB1F5D /* ScopeControlerTestDoubles.swift in Sources */,
+				CD4E112C1ED4294400AB1F5D /* ApplicationScopeControllerTests.swift in Sources */,
+				CD4E11231ED428AD00AB1F5D /* ScopeControllerImplTests.swift in Sources */,
 				CD4E10F21ED3FA4500AB1F5D /* TimerTestDoubles.swift in Sources */,
+				CD4E11601ED4296100AB1F5D /* NotificationCenterImplTests.swift in Sources */,
+				CD4E115F1ED4296100AB1F5D /* EventCenterImplTests.swift in Sources */,
+				CD4E11741ED4296C00AB1F5D /* URLRequestFactoryTests.swift in Sources */,
 				CD4E10EF1ED3FA4500AB1F5D /* InactivityControllerImplTests.swift in Sources */,
+				CD4E11731ED4296C00AB1F5D /* SyncNetworkClientTests.swift in Sources */,
+				CD4E11171ED4286600AB1F5D /* BasePresenterImplTests.swift in Sources */,
+				CD4E11581ED4295A00AB1F5D /* LoggerTests.swift in Sources */,
+				CD4E117D1ED42C8900AB1F5D /* NetworkClientConfigTestDoubles.swift in Sources */,
+				CD4E11261ED428AD00AB1F5D /* AssemblerScopeImplTests.swift in Sources */,
+				CD4E11791ED4297600AB1F5D /* ArgumentCheckingTests.swift in Sources */,
 				CD4E10F01ED3FA4500AB1F5D /* AppLifecycleNotifierTestDoubles.swift in Sources */,
+				CD4E11831ED42E1700AB1F5D /* RemoteResourceConfigTestDoubles.swift in Sources */,
+				CD4E11711ED4296C00AB1F5D /* StringDataSerializationTests.swift in Sources */,
 				CD4E10FE1ED4132F00AB1F5D /* SwinejctFactoryTests.swift in Sources */,
+				CD4E11101ED4232000AB1F5D /* ResultCachingOperationImplTests.swift in Sources */,
+				CD4E117B1ED42B1800AB1F5D /* TestLogger.swift in Sources */,
+				CD4E110B1ED420B900AB1F5D /* AsyncOperationTests.swift in Sources */,
+				CD4E11751ED4296C00AB1F5D /* BaseRemoteResourceTests.swift in Sources */,
 				CD4E10FF1ED4132F00AB1F5D /* UIViewControllerPresenterSupportTests.swift in Sources */,
 				CD4E10F31ED3FA4500AB1F5D /* UserInteractionNotifierTestDoubles.swift in Sources */,
+				CD4E11571ED4295A00AB1F5D /* LoggerFakes.swift in Sources */,
+				CD4E11821ED42E1700AB1F5D /* NetworkClientTestDoubles.swift in Sources */,
+				CD4E11151ED427FF00AB1F5D /* ResultTests.swift in Sources */,
+				CD4E11251ED428AD00AB1F5D /* ScopeTestDoubles.swift in Sources */,
+				CD4E11721ED4296C00AB1F5D /* HTTPURLResponseProcessorTests.swift in Sources */,
+				CD4E115A1ED4295A00AB1F5D /* ConsoleLoggerTests.swift in Sources */,
+				CD4E11761ED4296C00AB1F5D /* NetworkResponseTests.swift in Sources */,
 				CD4E10F11ED3FA4500AB1F5D /* InactivityNotifierConfigurationTestDoubles.swift in Sources */,
+				CD4E11221ED428AD00AB1F5D /* InstanceProviderImplTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

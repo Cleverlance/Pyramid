@@ -10,7 +10,7 @@ public protocol RepositoryProtocol {
     func deleteAll() throws
 }
 
-open class Repository<Model>: AbstractClass {
+open class Repository<Model>: AbstractClass, RepositoryProtocol {
 
     public init() {}
 

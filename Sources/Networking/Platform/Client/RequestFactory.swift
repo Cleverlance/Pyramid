@@ -50,7 +50,7 @@ internal final class URLRequestFactory: RequestFactory {
         case .wwwFormUrlEncoded:
             return "application/x-www-form-urlencoded"
         case .json:
-            return "application/json"
+            return "application/json; charset=utf-8"
         }
     }
 

@@ -2,7 +2,7 @@
 //  Copyright © 2016 Cleverlance. All rights reserved.
 //
 
-public struct ConversionError {
+public struct ConversionError: Error {
     let file: String
     let line: Int
 

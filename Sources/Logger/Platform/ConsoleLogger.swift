@@ -10,7 +10,7 @@ internal final class ConsoleLogger: Logger {
         NSLog("%@ %@\n\n", getLevelPrefix(level), message)
     }
 
-    private func getLevelPrefix(_ level: LogLevel) -> String {
+    internal func getLevelPrefix(_ level: LogLevel) -> String {
         switch level {
         case .error:
             return "‼️‼️‼️ERROR:"

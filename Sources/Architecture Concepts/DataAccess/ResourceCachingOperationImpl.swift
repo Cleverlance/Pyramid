@@ -25,7 +25,7 @@ Repository.Model == ItemType {
             return item
         } else {
             let item = try loadOperation.execute()
-            try repository.save(item)
+            ignoreError { try repository.save(item) }
             return item
         }
     }
