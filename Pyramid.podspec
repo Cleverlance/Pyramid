@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name             = 'Pyramid'
-  spec.version          = '0.1.0'
+  spec.version          = '0.2.0'
   spec.summary          = 'Basic concepts for iOS app architecture'
   spec.description      = <<-DESC
 Basic concepts for iOS app architecture.
@@ -25,5 +25,6 @@ Basic concepts for iOS app architecture.
 
   spec.subspec 'Testing' do |testing|
     testing.source_files = 'Sources/Testing/**/*'
+    testing.dependency 'Pyramid/Core'
   end
 end
