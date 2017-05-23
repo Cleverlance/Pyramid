@@ -2,21 +2,22 @@
 //  Copyright © 2016 Cleverlance. All rights reserved.
 //
 
-public protocol ConverterType {
+public protocol ConverterProtocol {
     associatedtype Input
     associatedtype Output
 
     func convert(_ input: Input) throws -> Output
 }
 
-open class Converter<Input, Output>: AbstractClass, ConverterType {
+public typealias Converter<Input, Output> = TaggedConverter<Input, Output, Void>
 
+open class TaggedConverter<Input, Output, Tag>: AbstractClass, ConverterProtocol {
     public init() {}
 
     open func convert(_ input: Input) throws -> Output { virtualMethod }
 }
 
-public extension Converter {
+extension ConverterProtocol {
 
     public func convertArray(_ inputs: [Input]?) throws -> [Output] {
         return try (inputs ?? []).map(convert)

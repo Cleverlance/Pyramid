@@ -13,6 +13,8 @@
 		CD4E10F11ED3FA4500AB1F5D /* InactivityNotifierConfigurationTestDoubles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E10EC1ED3FA4500AB1F5D /* InactivityNotifierConfigurationTestDoubles.swift */; };
 		CD4E10F21ED3FA4500AB1F5D /* TimerTestDoubles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E10ED1ED3FA4500AB1F5D /* TimerTestDoubles.swift */; };
 		CD4E10F31ED3FA4500AB1F5D /* UserInteractionNotifierTestDoubles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E10EE1ED3FA4500AB1F5D /* UserInteractionNotifierTestDoubles.swift */; };
+		CD4E10FE1ED4132F00AB1F5D /* SwinejctFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E10FB1ED4132F00AB1F5D /* SwinejctFactoryTests.swift */; };
+		CD4E10FF1ED4132F00AB1F5D /* UIViewControllerPresenterSupportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E10FD1ED4132F00AB1F5D /* UIViewControllerPresenterSupportTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		CD4E10EC1ED3FA4500AB1F5D /* InactivityNotifierConfigurationTestDoubles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InactivityNotifierConfigurationTestDoubles.swift; sourceTree = "<group>"; };
 		CD4E10ED1ED3FA4500AB1F5D /* TimerTestDoubles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerTestDoubles.swift; sourceTree = "<group>"; };
 		CD4E10EE1ED3FA4500AB1F5D /* UserInteractionNotifierTestDoubles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInteractionNotifierTestDoubles.swift; sourceTree = "<group>"; };
+		CD4E10FB1ED4132F00AB1F5D /* SwinejctFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwinejctFactoryTests.swift; sourceTree = "<group>"; };
+		CD4E10FD1ED4132F00AB1F5D /* UIViewControllerPresenterSupportTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerPresenterSupportTests.swift; sourceTree = "<group>"; };
 		EB407CE1BA144CA5ABCEB173 /* Pods_Pyramid_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pyramid_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F66328D1D37FAEA49B9A678D /* Pyramid.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Pyramid.podspec; path = ../Pyramid.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +69,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				CD4E10F91ED4132F00AB1F5D /* Architecture Concepts */,
 				CD4E10E71ED3FA4500AB1F5D /* Inactivity */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
@@ -123,6 +128,31 @@
 				CD4E10EE1ED3FA4500AB1F5D /* UserInteractionNotifierTestDoubles.swift */,
 			);
 			path = "Test Doubles";
+			sourceTree = "<group>";
+		};
+		CD4E10F91ED4132F00AB1F5D /* Architecture Concepts */ = {
+			isa = PBXGroup;
+			children = (
+				CD4E10FA1ED4132F00AB1F5D /* Injection */,
+				CD4E10FC1ED4132F00AB1F5D /* View */,
+			);
+			path = "Architecture Concepts";
+			sourceTree = "<group>";
+		};
+		CD4E10FA1ED4132F00AB1F5D /* Injection */ = {
+			isa = PBXGroup;
+			children = (
+				CD4E10FB1ED4132F00AB1F5D /* SwinejctFactoryTests.swift */,
+			);
+			path = Injection;
+			sourceTree = "<group>";
+		};
+		CD4E10FC1ED4132F00AB1F5D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CD4E10FD1ED4132F00AB1F5D /* UIViewControllerPresenterSupportTests.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		FE230B6B3443CAE9C61E6D28 /* Pods */ = {
@@ -258,6 +288,8 @@
 				CD4E10F21ED3FA4500AB1F5D /* TimerTestDoubles.swift in Sources */,
 				CD4E10EF1ED3FA4500AB1F5D /* InactivityControllerImplTests.swift in Sources */,
 				CD4E10F01ED3FA4500AB1F5D /* AppLifecycleNotifierTestDoubles.swift in Sources */,
+				CD4E10FE1ED4132F00AB1F5D /* SwinejctFactoryTests.swift in Sources */,
+				CD4E10FF1ED4132F00AB1F5D /* UIViewControllerPresenterSupportTests.swift in Sources */,
 				CD4E10F31ED3FA4500AB1F5D /* UserInteractionNotifierTestDoubles.swift in Sources */,
 				CD4E10F11ED3FA4500AB1F5D /* InactivityNotifierConfigurationTestDoubles.swift in Sources */,
 			);

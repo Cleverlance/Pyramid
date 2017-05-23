@@ -2,7 +2,7 @@
 //  Copyright © 2016 Cleverlance. All rights reserved.
 //
 
-public protocol FormatterType {
+public protocol FormatterProtocol {
     associatedtype Model
     associatedtype ViewModel
 
@@ -10,8 +10,9 @@ public protocol FormatterType {
 }
 
 public typealias Formatter<Model, ViewModel> = TaggedFormatter<Model, ViewModel, Void>
-open class TaggedFormatter<Model, ViewModel, Tag>: AbstractClass, FormatterType {
+
+open class TaggedFormatter<Model, ViewModel, Tag>: AbstractClass, FormatterProtocol {
     public init() {}
 
-    open func format(_ model: Model) -> ViewModel { virtualMethod }
+    public func format(_ model: Model) -> ViewModel { virtualMethod }
 }

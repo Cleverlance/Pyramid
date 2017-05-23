@@ -20,24 +20,3 @@ public func == <T: ThrowingValueWrapper>(lhs: T, rhs: T) -> Bool {
 public protocol ValueWrapper: ThrowingValueWrapper {
     init(_ value: Value)
 }
-
-public extension ValueWrapper {
-    public init(_ value: Value) throws {
-        self.init(value)
-    }
-}
-
-public extension ThrowingValueWrapper {
-
-    public init?(valueOrNil: Value?) throws {
-        guard let value = valueOrNil else { return nil }
-        try self.init(value)
-    }
-}
-
-public extension ValueWrapper {
-    public init?(valueOrNil: Value?) {
-        guard let value = valueOrNil else { return nil }
-        self.init(value)
-    }
-}

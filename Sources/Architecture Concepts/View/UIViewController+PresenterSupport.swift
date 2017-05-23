@@ -4,28 +4,28 @@
 
 import UIKit
 
-public extension UIViewController {
+extension UIViewController {
 
     func customViewWillAppear(animated: Bool) {
         self.customViewWillAppear(animated: animated)
 
-        if let holder = self as? AnyPresenterHolder, let presenter = holder.anyPresenter {
-            presenter.active = true
+        if let holder = self as? MultiplePresenterHolder {
+            holder.presenters.forEach { $0.isActive = true }
         }
     }
 
     func customViewDidDisappear(animated: Bool) {
         self.customViewDidDisappear(animated: animated)
 
-        if let holder = self as? AnyPresenterHolder, let presenter = holder.anyPresenter {
-            presenter.active = false
+        if let holder = self as? MultiplePresenterHolder {
+            holder.presenters.forEach { $0.isActive = false }
         }
     }
 }
 
 // MARK: - Swizzling
 
-public extension UIViewController {
+extension UIViewController {
     open override class func initialize() {
         guard self === UIViewController.self else { return }
         doSwizzling(self)
@@ -50,16 +50,16 @@ private func swizzle(
     originalSelector: Selector,
     swizzledSelector: Selector,
     onClass clazz: AnyClass
-) {
+    ) {
     let originalMethod = class_getInstanceMethod(clazz, originalSelector)
     let swizzledMethod = class_getInstanceMethod(clazz, swizzledSelector)
 
     let didAddMethod = class_addMethod(clazz, originalSelector,
-        method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod))
+                                       method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod))
 
     if didAddMethod {
         class_replaceMethod(clazz, swizzledSelector, method_getImplementation(originalMethod),
-            method_getTypeEncoding(originalMethod))
+                            method_getTypeEncoding(originalMethod))
     } else {
         method_exchangeImplementations(originalMethod, swizzledMethod)
     }
