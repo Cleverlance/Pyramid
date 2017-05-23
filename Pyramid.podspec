@@ -25,5 +25,6 @@ Basic concepts for iOS app architecture.
 
   spec.subspec 'Testing' do |testing|
     testing.source_files = 'Sources/Testing/**/*'
+    testing.dependency 'Pyramid/Core'
   end
 end
