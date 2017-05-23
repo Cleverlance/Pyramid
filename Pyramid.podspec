@@ -1,21 +1,29 @@
-Pod::Spec.new do |s|
-  s.name             = 'Pyramid'
-  s.version          = '0.1.0'
-  s.summary          = 'Basic concepts for iOS app architecture'
-  s.description      = <<-DESC
+Pod::Spec.new do |spec|
+  spec.name             = 'Pyramid'
+  spec.version          = '0.1.0'
+  spec.summary          = 'Basic concepts for iOS app architecture'
+  spec.description      = <<-DESC
 Basic concepts for iOS app architecture.
                        DESC
 
-  s.homepage         = 'https://github.com/cleverlance/Pyramid'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'jakubvano' => 'jakub.vano@cleverlance.com' }
-  s.source           = { :git => 'https://github.com/cleverlance/Pyramid.git', :tag => s.version.to_s }
+  spec.homepage         = 'https://github.com/cleverlance/Pyramid'
+  spec.license          = { :type => 'MIT', :file => 'LICENSE' }
+  spec.author           = { 'jakubvano' => 'jakub.vano@cleverlance.com' }
+  spec.source           = { :git => 'https://github.com/cleverlance/Pyramid.git', :tag => spec.version.to_s }
 
-  s.ios.deployment_target = '8.0'
+  spec.ios.deployment_target = '8.0'
 
-  s.source_files = 'Sources/**/*'
+  spec.dependency 'Swinject', '~> 2.0'
+  spec.dependency 'SwinjectAutoregistration'
+  spec.dependency 'ObjectMapper', '~> 2.0'
 
-  s.dependency 'Swinject', '~> 2.0'
-  s.dependency 'SwinjectAutoregistration'
-  s.dependency 'ObjectMapper', '~> 2.0'
+  spec.default_subspec = 'Core'
+
+  spec.subspec 'Core' do |core|
+    core.source_files = 'Sources/Core/**/*'
+  end
+
+  spec.subspec 'Testing' do |testing|
+    testing.source_files = 'Sources/Testing/**/*'
+  end
 end
