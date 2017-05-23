@@ -13,10 +13,7 @@ final class CommandPatternAssembly: Assembly {
         }
 
         container.register(Invoker.self) { r in
-            InvokerImpl(
-                executor: r.resolve(Executor.self)!,
-                logger: r.resolve(Logger.self)!
-            )
+            InvokerImpl(executor: r.resolve(Executor.self)!)
         }.inObjectScope(.container)
     }
 }

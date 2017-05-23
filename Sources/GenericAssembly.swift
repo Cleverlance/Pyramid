@@ -8,8 +8,6 @@ public final class GenericAssembly: CompositeAssembly {
     public var assemblies: [Assembly] = [
         LocalizerAssembly(),
         CommandPatternAssembly(),
-        LoggerAssembly(),
-        NetworkingAssembly(),
         TimerAssembly(),
         InactivityAssembly(),
         LocalStorageAssembly(),
