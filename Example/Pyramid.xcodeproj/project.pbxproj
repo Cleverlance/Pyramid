@@ -44,6 +44,7 @@
 		CD4E11871ED4378500AB1F5D /* SwinjectExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E11861ED4378500AB1F5D /* SwinjectExtensionsTests.swift */; };
 		CD6D03371F02420B00ABB94F /* BuilderSupportSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6D03361F02420B00ABB94F /* BuilderSupportSpec.swift */; };
 		CD6D03401F025D1800ABB94F /* TupleFlatteningSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6D033F1F025D1800ABB94F /* TupleFlatteningSpec.swift */; };
+		CD6D03461F02675500ABB94F /* CompositeErrorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6D03451F02675500ABB94F /* CompositeErrorSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		CD6D03361F02420B00ABB94F /* BuilderSupportSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuilderSupportSpec.swift; sourceTree = "<group>"; };
 		CD6D033F1F025D1800ABB94F /* TupleFlatteningSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TupleFlatteningSpec.swift; sourceTree = "<group>"; };
 		CD6D03411F02633200ABB94F /* TupleFlatteningSpec.swift.erb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TupleFlatteningSpec.swift.erb; sourceTree = "<group>"; };
+		CD6D03451F02675500ABB94F /* CompositeErrorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositeErrorSpec.swift; sourceTree = "<group>"; };
 		EB407CE1BA144CA5ABCEB173 /* Pods_Pyramid_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pyramid_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F66328D1D37FAEA49B9A678D /* Pyramid.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Pyramid.podspec; path = ../Pyramid.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -248,6 +250,7 @@
 			children = (
 				CD4E11161ED4286600AB1F5D /* BasePresenterImplTests.swift */,
 				CD6D03361F02420B00ABB94F /* BuilderSupportSpec.swift */,
+				CD6D03451F02675500ABB94F /* CompositeErrorSpec.swift */,
 			);
 			name = Presentation;
 			sourceTree = "<group>";
@@ -554,6 +557,7 @@
 				CD4E115F1ED4296100AB1F5D /* EventCenterImplTests.swift in Sources */,
 				CD4E11871ED4378500AB1F5D /* SwinjectExtensionsTests.swift in Sources */,
 				CD4E11741ED4296C00AB1F5D /* URLRequestFactoryTests.swift in Sources */,
+				CD6D03461F02675500ABB94F /* CompositeErrorSpec.swift in Sources */,
 				CD4E10EF1ED3FA4500AB1F5D /* InactivityControllerImplTests.swift in Sources */,
 				CD4E11731ED4296C00AB1F5D /* SyncNetworkClientTests.swift in Sources */,
 				CD4E11171ED4286600AB1F5D /* BasePresenterImplTests.swift in Sources */,
