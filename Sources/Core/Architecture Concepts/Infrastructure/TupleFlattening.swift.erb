@@ -1,0 +1,36 @@
+//
+//  Copyright © 2016 Cleverlance. All rights reserved.
+//
+<% 
+$max_args = 20
+$letters = ('A'..'ZZ').to_a 
+
+def generics(i) 
+	(0..i-1).map{|k| $letters[k] }.join(', ')
+end
+
+def input_type(i)
+	if i <= 2 then 
+		"(A, B)"
+	else
+		"(#{input_type(i-1)}, #{$letters[i-1]})"
+	end
+end
+
+def output_type(i)
+	"(#{generics(i)})"
+end
+
+def output(prefix, i)
+	if i <= 2 then
+		"#{prefix}.0, #{prefix}.1"
+	else
+		"#{output(prefix+'.0', i-1)}, #{prefix}.1"
+	end
+end
+%>
+<% (3..$max_args).each do |i|  %>
+public func flatten<<%= generics(i) %>>(_ input: <%= input_type(i) %>) -> <%= output_type(i) %> {
+	return (<%= output('input', i) %>)
+}
+<% end %>

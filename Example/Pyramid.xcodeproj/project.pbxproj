@@ -43,11 +43,11 @@
 		CD4E11831ED42E1700AB1F5D /* RemoteResourceConfigTestDoubles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E11811ED42E1700AB1F5D /* RemoteResourceConfigTestDoubles.swift */; };
 		CD4E11871ED4378500AB1F5D /* SwinjectExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E11861ED4378500AB1F5D /* SwinjectExtensionsTests.swift */; };
 		CD6D03371F02420B00ABB94F /* BuilderSupportSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6D03361F02420B00ABB94F /* BuilderSupportSpec.swift */; };
+		CD6D03401F025D1800ABB94F /* TupleFlatteningSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6D033F1F025D1800ABB94F /* TupleFlatteningSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		12DD7C2F0EC508A565EEBC66 /* Pods-Pyramid_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pyramid_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pyramid_Tests/Pods-Pyramid_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		288949172314C485BBC7209F /* Pods-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.release.xcconfig"; path = "Pods/Target Support Files/Pods-test/Pods-test.release.xcconfig"; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* Pyramid_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Pyramid_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65954FD9A87E379DC6F18944 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -89,8 +89,9 @@
 		CD4E11811ED42E1700AB1F5D /* RemoteResourceConfigTestDoubles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteResourceConfigTestDoubles.swift; sourceTree = "<group>"; };
 		CD4E11861ED4378500AB1F5D /* SwinjectExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwinjectExtensionsTests.swift; sourceTree = "<group>"; };
 		CD6D03361F02420B00ABB94F /* BuilderSupportSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuilderSupportSpec.swift; sourceTree = "<group>"; };
+		CD6D033F1F025D1800ABB94F /* TupleFlatteningSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TupleFlatteningSpec.swift; sourceTree = "<group>"; };
+		CD6D03411F02633200ABB94F /* TupleFlatteningSpec.swift.erb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TupleFlatteningSpec.swift.erb; sourceTree = "<group>"; };
 		EB407CE1BA144CA5ABCEB173 /* Pods_Pyramid_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pyramid_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F2F3C580CC18B1F71A2E5881 /* Pods-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-test/Pods-test.debug.xcconfig"; sourceTree = "<group>"; };
 		F66328D1D37FAEA49B9A678D /* Pyramid.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Pyramid.podspec; path = ../Pyramid.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,6 +200,7 @@
 		CD4E10F91ED4132F00AB1F5D /* Architecture Concepts */ = {
 			isa = PBXGroup;
 			children = (
+				CD6D033E1F025CFA00ABB94F /* Infrastructure */,
 				CD4E11181ED4286800AB1F5D /* Presentation */,
 				CD4E110E1ED4230D00AB1F5D /* DataAccess */,
 				CD4E11091ED420B900AB1F5D /* Application */,
@@ -403,13 +405,20 @@
 			path = Validation;
 			sourceTree = "<group>";
 		};
+		CD6D033E1F025CFA00ABB94F /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				CD6D03411F02633200ABB94F /* TupleFlatteningSpec.swift.erb */,
+				CD6D033F1F025D1800ABB94F /* TupleFlatteningSpec.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
 		FE230B6B3443CAE9C61E6D28 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				9025D3A0ADB2920269E2100F /* Pods-Pyramid_Tests.debug.xcconfig */,
 				12DD7C2F0EC508A565EEBC66 /* Pods-Pyramid_Tests.release.xcconfig */,
-				F2F3C580CC18B1F71A2E5881 /* Pods-test.debug.xcconfig */,
-				288949172314C485BBC7209F /* Pods-test.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -568,6 +577,7 @@
 				CD4E11721ED4296C00AB1F5D /* HTTPURLResponseProcessorTests.swift in Sources */,
 				CD4E115A1ED4295A00AB1F5D /* ConsoleLoggerTests.swift in Sources */,
 				CD4E11761ED4296C00AB1F5D /* NetworkResponseTests.swift in Sources */,
+				CD6D03401F025D1800ABB94F /* TupleFlatteningSpec.swift in Sources */,
 				CD4E10F11ED3FA4500AB1F5D /* InactivityNotifierConfigurationTestDoubles.swift in Sources */,
 				CD4E11221ED428AD00AB1F5D /* InstanceProviderImplTests.swift in Sources */,
 			);
