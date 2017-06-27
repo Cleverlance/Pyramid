@@ -2,14 +2,16 @@
 //  Copyright © 2016 Cleverlance. All rights reserved.
 //
 
+import Result
+
 class AsyncOperationDummy<Input, Output, Tag>: TaggedAsyncOperation<Input, Output, Tag> {
-    override func execute(with input: Input, completion: @escaping (Result<Output>) -> Void) { }
+    override func execute(with input: Input, completion: @escaping (OperationResult<Output>) -> Void) { }
 }
 
 public class AsyncOperationSpy<Input, Output, Tag>: TaggedAsyncOperation<Input, Output, Tag> {
     public var inputs = [Input]()
 
-    override public func execute(with input: Input, completion: @escaping (Result<Output>) -> Void) {
+    override public func execute(with input: Input, completion: @escaping (OperationResult<Output>) -> Void) {
         inputs.append(input)
     }
 }
@@ -21,8 +23,8 @@ class AsyncOperationThrowing<Input, Output, Tag>: TaggedAsyncOperation<Input, Ou
         self.error = error
     }
 
-    override func execute(with input: Input, completion: @escaping (Result<Output>) -> Void) {
-        completion(.failure(error))
+    override func execute(with input: Input, completion: @escaping (OperationResult<Output>) -> Void) {
+        completion(.failure(error: error))
     }
 }
 
@@ -33,7 +35,7 @@ class AsyncOperationReturning<Input, Output, Tag>: TaggedAsyncOperation<Input, O
         self.value = value
     }
 
-    override func execute(with input: Input, completion: @escaping (Result<Output>) -> Void) {
+    override func execute(with input: Input, completion: @escaping (OperationResult<Output>) -> Void) {
         completion(.success(value))
     }
 }
@@ -46,7 +48,7 @@ public class AsyncOperationSpyReturning<Input, Output, Tag>: TaggedAsyncOperatio
         self.value = value
     }
 
-    override public func execute(with input: Input, completion: @escaping (Result<Output>) -> Void) {
+    override public func execute(with input: Input, completion: @escaping (OperationResult<Output>) -> Void) {
         inputs.append(input)
         completion(.success(value))
     }

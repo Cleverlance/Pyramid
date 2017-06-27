@@ -16,15 +16,16 @@ Basic concepts for iOS app architecture.
   spec.dependency 'Swinject', '~> 2.0'
   spec.dependency 'SwinjectAutoregistration'
   spec.dependency 'ObjectMapper', '~> 2.0'
+  spec.dependency 'Result'
 
   spec.default_subspec = 'Core'
 
   spec.subspec 'Core' do |core|
-    core.source_files = 'Sources/Core/**/*'
+    core.source_files = 'Sources/Core/**/*.swift'
   end
 
   spec.subspec 'Testing' do |testing|
-    testing.source_files = 'Sources/Testing/**/*'
+    testing.source_files = 'Sources/Testing/**/*.swift'
     testing.dependency 'Pyramid/Core'
   end
 end

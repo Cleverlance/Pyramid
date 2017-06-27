@@ -8,12 +8,12 @@ internal class Command<Request, Response, Tag>: CommandType {
 
     private let receiver: Receiver
     let request: Request
-    private let completion: (Result<Response>) -> Void
+    private let completion: (OperationResult<Response>) -> Void
 
     required init(
         receiver: Receiver,
         request: Request,
-        completion: @escaping (Result<Response>) -> Void
+        completion: @escaping (OperationResult<Response>) -> Void
     ) {
         self.receiver = receiver
         self.request = request
@@ -24,7 +24,7 @@ internal class Command<Request, Response, Tag>: CommandType {
         return try receiver.execute(with: request)
     }
 
-    func complete(_ result: Result<Response>) {
+    func complete(_ result: OperationResult<Response>) {
         completion(result)
     }
 }

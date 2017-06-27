@@ -5,7 +5,7 @@
 internal protocol Executor {
     func execute<Command: CommandType>(
         command: Command,
-        completion: @escaping (Result<Command.Response>) -> Void
+        completion: @escaping (OperationResult<Command.Response>) -> Void
     )
-    func complete<Command: CommandType>(command: Command, result: Result<Command.Response>)
+    func complete<Command: CommandType>(command: Command, result: OperationResult<Command.Response>)
 }

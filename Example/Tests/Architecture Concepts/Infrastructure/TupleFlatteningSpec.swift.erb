@@ -1,0 +1,29 @@
+// swiftlint:disable function_body_length
+import Quick
+import Nimble
+import Pyramid
+<%
+# Swift supports comparison only for up to 6-tuples
+$max_arguments = 6
+
+def input(i)
+	if i <= 2 then
+		"(1, 2)"
+	else
+		"(#{input(i-1)}, #{i})"
+	end
+end
+
+def output(i)
+	"(#{(1..i).map{|k| k.to_s }.join(', ')})"
+end
+%>
+class TupleFlatteningSpec: QuickSpec {
+    override func spec() {
+        it("flattens") {
+		<% (3..$max_arguments).each do |i|%>
+			expect(flatten(<%= input(i) %>) == <%= output(i) %>).to(beTrue())
+		<% end %>
+		}
+    }
+}

@@ -15,7 +15,7 @@ public class CommandAsyncOperation<Input, Output, AsyncTag, ReceiverTag>
         self.invoker = invoker
     }
 
-    public override func execute(with request: Input, completion: @escaping (Result<Output>) -> Void) {
+    public override func execute(with request: Input, completion: @escaping (OperationResult<Output>) -> Void) {
         let command = Command(
             receiver: receiver,
             request: request,

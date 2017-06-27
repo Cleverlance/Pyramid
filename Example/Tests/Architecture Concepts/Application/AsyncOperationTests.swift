@@ -15,7 +15,7 @@ class AsyncOperationTests: XCTestCase {
 
     func test_Execute_GivenNoInputAsyncOperationCompletingWith42_ItShouldCompleteWith42() {
         let Operation = NoInputAsyncOperation.returning(42)
-        var result: Result<Int>?
+        var result: OperationResult<Int>?
 
         Operation.execute { result = $0 }
 
@@ -24,7 +24,7 @@ class AsyncOperationTests: XCTestCase {
 
     func test_Execute_GivenNoInputAsyncOperationCompletingWithError_ItShouldCompleteWithError() {
         let Operation = NoInputAsyncOperation.throwing()
-        var result: Result<Int>?
+        var result: OperationResult<Int>?
 
         Operation.execute { result = $0 }
 
