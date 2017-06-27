@@ -17,7 +17,6 @@
 		CD4E10FF1ED4132F00AB1F5D /* UIViewControllerPresenterSupportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E10FD1ED4132F00AB1F5D /* UIViewControllerPresenterSupportTests.swift */; };
 		CD4E110B1ED420B900AB1F5D /* AsyncOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E110A1ED420B900AB1F5D /* AsyncOperationTests.swift */; };
 		CD4E11101ED4232000AB1F5D /* ResultCachingOperationImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E110F1ED4232000AB1F5D /* ResultCachingOperationImplTests.swift */; };
-		CD4E11151ED427FF00AB1F5D /* ResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E11141ED427FF00AB1F5D /* ResultTests.swift */; };
 		CD4E11171ED4286600AB1F5D /* BasePresenterImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E11161ED4286600AB1F5D /* BasePresenterImplTests.swift */; };
 		CD4E11221ED428AD00AB1F5D /* InstanceProviderImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E111B1ED428AD00AB1F5D /* InstanceProviderImplTests.swift */; };
 		CD4E11231ED428AD00AB1F5D /* ScopeControllerImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E111C1ED428AD00AB1F5D /* ScopeControllerImplTests.swift */; };
@@ -63,7 +62,6 @@
 		CD4E10FD1ED4132F00AB1F5D /* UIViewControllerPresenterSupportTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerPresenterSupportTests.swift; sourceTree = "<group>"; };
 		CD4E110A1ED420B900AB1F5D /* AsyncOperationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncOperationTests.swift; sourceTree = "<group>"; };
 		CD4E110F1ED4232000AB1F5D /* ResultCachingOperationImplTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultCachingOperationImplTests.swift; sourceTree = "<group>"; };
-		CD4E11141ED427FF00AB1F5D /* ResultTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTests.swift; sourceTree = "<group>"; };
 		CD4E11161ED4286600AB1F5D /* BasePresenterImplTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenterImplTests.swift; sourceTree = "<group>"; };
 		CD4E111B1ED428AD00AB1F5D /* InstanceProviderImplTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstanceProviderImplTests.swift; sourceTree = "<group>"; };
 		CD4E111C1ED428AD00AB1F5D /* ScopeControllerImplTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScopeControllerImplTests.swift; sourceTree = "<group>"; };
@@ -200,7 +198,6 @@
 			isa = PBXGroup;
 			children = (
 				CD4E11181ED4286800AB1F5D /* Presentation */,
-				CD4E11131ED427F700AB1F5D /* Infrastructure */,
 				CD4E110E1ED4230D00AB1F5D /* DataAccess */,
 				CD4E11091ED420B900AB1F5D /* Application */,
 				CD4E10FA1ED4132F00AB1F5D /* Injection */,
@@ -240,14 +237,6 @@
 				CD4E110F1ED4232000AB1F5D /* ResultCachingOperationImplTests.swift */,
 			);
 			name = DataAccess;
-			sourceTree = "<group>";
-		};
-		CD4E11131ED427F700AB1F5D /* Infrastructure */ = {
-			isa = PBXGroup;
-			children = (
-				CD4E11141ED427FF00AB1F5D /* ResultTests.swift */,
-			);
-			name = Infrastructure;
 			sourceTree = "<group>";
 		};
 		CD4E11181ED4286800AB1F5D /* Presentation */ = {
@@ -571,7 +560,6 @@
 				CD4E10F31ED3FA4500AB1F5D /* UserInteractionNotifierTestDoubles.swift in Sources */,
 				CD4E11571ED4295A00AB1F5D /* LoggerFakes.swift in Sources */,
 				CD4E11821ED42E1700AB1F5D /* NetworkClientTestDoubles.swift in Sources */,
-				CD4E11151ED427FF00AB1F5D /* ResultTests.swift in Sources */,
 				CD4E11251ED428AD00AB1F5D /* ScopeTestDoubles.swift in Sources */,
 				CD4E11721ED4296C00AB1F5D /* HTTPURLResponseProcessorTests.swift in Sources */,
 				CD4E115A1ED4295A00AB1F5D /* ConsoleLoggerTests.swift in Sources */,

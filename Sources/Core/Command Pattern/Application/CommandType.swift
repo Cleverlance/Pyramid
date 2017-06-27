@@ -9,9 +9,9 @@ public protocol CommandType: CustomStringConvertible {
 
     var request: Request { get }
 
-    init(receiver: Receiver, request: Request, completion: @escaping (Result<Response>) -> Void)
+    init(receiver: Receiver, request: Request, completion: @escaping (OperationResult<Response>) -> Void)
     func execute() throws -> Response
-    func complete(_ result: Result<Response>)
+    func complete(_ result: OperationResult<Response>)
 }
 
 extension CommandType {

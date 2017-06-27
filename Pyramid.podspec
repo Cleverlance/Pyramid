@@ -16,6 +16,7 @@ Basic concepts for iOS app architecture.
   spec.dependency 'Swinject', '~> 2.0'
   spec.dependency 'SwinjectAutoregistration'
   spec.dependency 'ObjectMapper', '~> 2.0'
+  spec.dependency 'Result'
 
   spec.default_subspec = 'Core'
 

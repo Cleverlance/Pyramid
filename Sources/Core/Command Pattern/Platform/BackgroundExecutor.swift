@@ -10,21 +10,21 @@ internal final class BackgroundExecutor: Executor {
 
     func execute<Command: CommandType>(
         command: Command,
-        completion: @escaping (Result<Command.Response>) -> Void
+        completion: @escaping (OperationResult<Command.Response>) -> Void
     ) {
         DispatchQueue.global(qos: .default).async {
             do {
                 let response = try command.execute()
                 completion(.success(response))
             } catch {
-                completion(.failure(error))
+                completion(.failure(error: error))
             }
         }
     }
 
     func complete<Command: CommandType>(
         command: Command,
-        result: Result<Command.Response>
+        result: OperationResult<Command.Response>
     ) {
         DispatchQueue.main.async {
             command.complete(result)

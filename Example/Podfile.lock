@@ -1,20 +1,25 @@
 PODS:
   - Nimble (5.1.1)
   - ObjectMapper (2.2.6)
-  - Pyramid (0.1.0):
+  - Pyramid (0.2.0):
     - ObjectMapper (~> 2.0)
-    - Pyramid/Core (= 0.1.0)
+    - Pyramid/Core (= 0.2.0)
+    - Result
     - Swinject (~> 2.0)
     - SwinjectAutoregistration
-  - Pyramid/Core (0.1.0):
+  - Pyramid/Core (0.2.0):
     - ObjectMapper (~> 2.0)
+    - Result
     - Swinject (~> 2.0)
     - SwinjectAutoregistration
-  - Pyramid/Testing (0.1.0):
+  - Pyramid/Testing (0.2.0):
     - ObjectMapper (~> 2.0)
+    - Pyramid/Core
+    - Result
     - Swinject (~> 2.0)
     - SwinjectAutoregistration
   - Quick (1.0.0)
+  - Result (3.2.2)
   - Swinject (2.0.0)
   - SwinjectAutoregistration (2.0.1):
     - Swinject (~> 2.0.0)
@@ -32,8 +37,9 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
   ObjectMapper: 042708195cc46c20871cbcbec0453826398273fd
-  Pyramid: 0c0c1fd94795f3773a6bb76872569997cab8ea89
+  Pyramid: eb5c47858940cc6e94e495aca5c6133705e97554
   Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
+  Result: 4edd39003fdccf281d418ee1b006571f70123250
   Swinject: 2e964a80d70ab09b3949c99032711f89147bfd60
   SwinjectAutoregistration: d19654c429354bad4b544c658dc92345ccdbb72c
 
