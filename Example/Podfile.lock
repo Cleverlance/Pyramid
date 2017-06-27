@@ -3,7 +3,38 @@ PODS:
   - ObjectMapper (2.2.6)
   - Pyramid (0.2.0):
     - ObjectMapper (~> 2.0)
+    - Pyramid/ApplicationScope (= 0.2.0)
+    - Pyramid/AppVersion (= 0.2.0)
+    - Pyramid/Builder (= 0.2.0)
+    - Pyramid/CommandPattern (= 0.2.0)
     - Pyramid/Core (= 0.2.0)
+    - Pyramid/Event (= 0.2.0)
+    - Pyramid/Inactivity (= 0.2.0)
+    - Pyramid/Localizer (= 0.2.0)
+    - Pyramid/LocalStorage (= 0.2.0)
+    - Pyramid/ScopeManagement (= 0.2.0)
+    - Pyramid/Testing (= 0.2.0)
+    - Pyramid/Timer (= 0.2.0)
+    - Result
+    - Swinject (~> 2.0)
+    - SwinjectAutoregistration
+  - Pyramid/ApplicationScope (0.2.0):
+    - ObjectMapper (~> 2.0)
+    - Result
+    - Swinject (~> 2.0)
+    - SwinjectAutoregistration
+  - Pyramid/AppVersion (0.2.0):
+    - ObjectMapper (~> 2.0)
+    - Result
+    - Swinject (~> 2.0)
+    - SwinjectAutoregistration
+  - Pyramid/Builder (0.2.0):
+    - ObjectMapper (~> 2.0)
+    - Result
+    - Swinject (~> 2.0)
+    - SwinjectAutoregistration
+  - Pyramid/CommandPattern (0.2.0):
+    - ObjectMapper (~> 2.0)
     - Result
     - Swinject (~> 2.0)
     - SwinjectAutoregistration
@@ -12,9 +43,39 @@ PODS:
     - Result
     - Swinject (~> 2.0)
     - SwinjectAutoregistration
+  - Pyramid/Event (0.2.0):
+    - ObjectMapper (~> 2.0)
+    - Result
+    - Swinject (~> 2.0)
+    - SwinjectAutoregistration
+  - Pyramid/Inactivity (0.2.0):
+    - ObjectMapper (~> 2.0)
+    - Result
+    - Swinject (~> 2.0)
+    - SwinjectAutoregistration
+  - Pyramid/Localizer (0.2.0):
+    - ObjectMapper (~> 2.0)
+    - Result
+    - Swinject (~> 2.0)
+    - SwinjectAutoregistration
+  - Pyramid/LocalStorage (0.2.0):
+    - ObjectMapper (~> 2.0)
+    - Result
+    - Swinject (~> 2.0)
+    - SwinjectAutoregistration
+  - Pyramid/ScopeManagement (0.2.0):
+    - ObjectMapper (~> 2.0)
+    - Result
+    - Swinject (~> 2.0)
+    - SwinjectAutoregistration
   - Pyramid/Testing (0.2.0):
     - ObjectMapper (~> 2.0)
     - Pyramid/Core
+    - Result
+    - Swinject (~> 2.0)
+    - SwinjectAutoregistration
+  - Pyramid/Timer (0.2.0):
+    - ObjectMapper (~> 2.0)
     - Result
     - Swinject (~> 2.0)
     - SwinjectAutoregistration
@@ -27,7 +88,6 @@ PODS:
 DEPENDENCIES:
   - Nimble (~> 5.1.1)
   - Pyramid (from `../`)
-  - Pyramid/Testing (from `../`)
   - Quick (~> 1.0.0)
 
 EXTERNAL SOURCES:
@@ -37,12 +97,12 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
   ObjectMapper: 042708195cc46c20871cbcbec0453826398273fd
-  Pyramid: 48835e3661c43cc0efb7e7af3f9242ec9d6cda03
+  Pyramid: 807980fb79c99ebeb1145c5d7ac1fa645dd59bfe
   Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
   Result: 4edd39003fdccf281d418ee1b006571f70123250
   Swinject: 2e964a80d70ab09b3949c99032711f89147bfd60
   SwinjectAutoregistration: d19654c429354bad4b544c658dc92345ccdbb72c
 
-PODFILE CHECKSUM: 7159304e20eb7f819e28247eff87c591f4a8117d
+PODFILE CHECKSUM: 2ed1a8d92266a919573074bbcb2d54ff182d5c08
 
 COCOAPODS: 1.2.1
