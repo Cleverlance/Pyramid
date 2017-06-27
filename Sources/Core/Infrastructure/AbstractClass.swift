@@ -5,5 +5,5 @@
 public protocol AbstractClass {}
 
 extension AbstractClass {
-    var virtualMethod: Never { fatalError() }
+    public var virtualMethod: Never { fatalError() }
 }
