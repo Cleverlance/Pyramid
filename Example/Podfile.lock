@@ -20,21 +20,26 @@ PODS:
     - SwinjectAutoregistration
   - Pyramid/ApplicationScope (0.2.0):
     - ObjectMapper (~> 2.0)
+    - Pyramid/Core
+    - Pyramid/ScopeManagement
     - Result
     - Swinject (~> 2.0)
     - SwinjectAutoregistration
   - Pyramid/AppVersion (0.2.0):
     - ObjectMapper (~> 2.0)
+    - Pyramid/Core
     - Result
     - Swinject (~> 2.0)
     - SwinjectAutoregistration
   - Pyramid/Builder (0.2.0):
     - ObjectMapper (~> 2.0)
+    - Pyramid/Core
     - Result
     - Swinject (~> 2.0)
     - SwinjectAutoregistration
   - Pyramid/CommandPattern (0.2.0):
     - ObjectMapper (~> 2.0)
+    - Pyramid/Core
     - Result
     - Swinject (~> 2.0)
     - SwinjectAutoregistration
@@ -45,11 +50,15 @@ PODS:
     - SwinjectAutoregistration
   - Pyramid/Event (0.2.0):
     - ObjectMapper (~> 2.0)
+    - Pyramid/Core
     - Result
     - Swinject (~> 2.0)
     - SwinjectAutoregistration
   - Pyramid/Inactivity (0.2.0):
     - ObjectMapper (~> 2.0)
+    - Pyramid/Core
+    - Pyramid/Event
+    - Pyramid/Timer
     - Result
     - Swinject (~> 2.0)
     - SwinjectAutoregistration
@@ -60,11 +69,13 @@ PODS:
     - SwinjectAutoregistration
   - Pyramid/LocalStorage (0.2.0):
     - ObjectMapper (~> 2.0)
+    - Pyramid/Core
     - Result
     - Swinject (~> 2.0)
     - SwinjectAutoregistration
   - Pyramid/ScopeManagement (0.2.0):
     - ObjectMapper (~> 2.0)
+    - Pyramid/Core
     - Result
     - Swinject (~> 2.0)
     - SwinjectAutoregistration
@@ -97,7 +108,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
   ObjectMapper: 042708195cc46c20871cbcbec0453826398273fd
-  Pyramid: 807980fb79c99ebeb1145c5d7ac1fa645dd59bfe
+  Pyramid: 23ca63631edf62cb1ce8e5708455dafac4cf0075
   Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
   Result: 4edd39003fdccf281d418ee1b006571f70123250
   Swinject: 2e964a80d70ab09b3949c99032711f89147bfd60
