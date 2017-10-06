@@ -6,9 +6,10 @@ import Swinject
 
 public var inactivityConfiguration: InactivityConfiguration!
 
-final class InactivityAssembly: Assembly {
+public final class InactivityAssembly: Assembly {
+    public init() {}
 
-    func assemble(container: Container) {
+    public func assemble(container: Container) {
 
         container.register(InactivityConfiguration.self) { _ in inactivityConfiguration }
 
@@ -29,7 +30,7 @@ final class InactivityAssembly: Assembly {
         }.inObjectScope(.container)
     }
 
-    func loaded(resolver: Resolver) {
+    public func loaded(resolver: Resolver) {
         resolver.ensureSingletonLoaded(type: InactivityNotifier.self)
     }
 }

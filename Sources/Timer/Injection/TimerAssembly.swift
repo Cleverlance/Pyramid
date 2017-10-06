@@ -4,9 +4,10 @@
 
 import Swinject
 
-final class TimerAssembly: Assembly {
+public final class TimerAssembly: Assembly {
+    public init() {}
 
-    func assemble(container: Container) {
+    public func assemble(container: Container) {
         container.register(Timer.self) { _ in TimerImpl() }
     }
 }

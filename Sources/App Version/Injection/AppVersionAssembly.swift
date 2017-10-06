@@ -4,9 +4,10 @@
 
 import Swinject
 
-final class AppVersionAssembly: Assembly {
-
-    func assemble(container: Container) {
+public final class AppVersionAssembly: Assembly {
+    public init() {}
+    
+    public func assemble(container: Container) {
 
         container.register(AppVersionGetterOperation.self) { _ in
             AppVersionGetterPlatformOperationImpl()
