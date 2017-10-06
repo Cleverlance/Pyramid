@@ -4,9 +4,10 @@
 
 import Swinject
 
-final class LocalizerAssembly: Assembly {
-
-    func assemble(container: Container) {
+public final class LocalizerAssembly: Assembly {
+    public init() {}
+    
+    public func assemble(container: Container) {
         container.register(Localizer.self) { _ in FoundationLocalizer() }
             .inObjectScope(.container)
     }

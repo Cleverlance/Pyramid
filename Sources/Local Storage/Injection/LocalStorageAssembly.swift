@@ -5,9 +5,10 @@
 import Swinject
 import SwinjectAutoregistration
 
-internal final class LocalStorageAssembly: Assembly {
+public final class LocalStorageAssembly: Assembly {
+    public init() {}
 
-    func assemble(container: Container) {
+    public func assemble(container: Container) {
         container.autoregister(LocalStore.self, initializer: UserDefaultsStoreImpl.init)
             .inObjectScope(.container)
     }

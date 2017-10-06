@@ -4,9 +4,10 @@
 
 import Swinject
 
-final class CommandPatternAssembly: Assembly {
-
-    func assemble(container: Container) {
+public final class CommandPatternAssembly: Assembly {
+    public init() {}
+    
+    public func assemble(container: Container) {
 
         container.register(Executor.self) { _ in
             BackgroundExecutor()
