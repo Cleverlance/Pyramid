@@ -3,5 +3,5 @@
 //
 
 public let sharedApplicationScopeController: ApplicationScopeController = {
-    return ScopeControllerImpl<ApplicationAssemblerScopeImpl>(parent: nil)
+    return ScopeControllerImpl<ApplicationScope>(parent: nil)
 }()

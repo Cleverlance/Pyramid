@@ -4,6 +4,22 @@
 
 import Result
 
+public protocol BaseBuilder {}
+
+public extension BaseBuilder {
+    public func any<T, E: Swift.Error>(_ value: T) -> Result<T, E> {
+        return .success(value)
+    }
+
+    public func notNil<T, E: Swift.Error>(_ value: T?, else error: E) -> Result<T, CompositeError<E>> {
+        if let value = value {
+            return .success(value)
+        } else {
+            return .failure(CompositeError(error))
+        }
+    }
+}
+
 public extension ResultProtocol {
     public func pack<R: ResultProtocol>(_ other: R, packedError: (Self.Error, Self.Error) -> Self.Error) -> Result<(Self.Value, R.Value), Self.Error> where R.Error == Self.Error {
         return analysis(
