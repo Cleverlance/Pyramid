@@ -6,12 +6,14 @@ public protocol AsyncOperationProtocol {
     associatedtype Input
     associatedtype Output
 
-    func execute(with input: Input, completion: @escaping (OperationResult<Output>) -> Void)
+    @discardableResult
+    func execute(with input: Input, completion: @escaping (OperationResult<Output>) -> Void) -> Execution?
 }
 
 extension AsyncOperationProtocol where Input == Empty {
-    public func execute(completion: @escaping (OperationResult<Output>) -> Void) {
-        execute(with: Empty(), completion: completion)
+    @discardableResult
+    public func execute(completion: @escaping (OperationResult<Output>) -> Void) -> Execution? {
+        return execute(with: Empty(), completion: completion)
     }
 }
 
@@ -20,7 +22,12 @@ public typealias AsyncOperation<Input, Output> = TaggedAsyncOperation<Input, Out
 open class TaggedAsyncOperation<Input, Output, Tag>: AbstractClass, AsyncOperationProtocol {
     public init() {}
 
-    open func execute(with input: Input, completion: @escaping (OperationResult<Output>) -> Void) {
+    @discardableResult
+    open func execute(with input: Input, completion: @escaping (OperationResult<Output>) -> Void) -> Execution? {
         virtualMethod
     }
+}
+
+public protocol Execution {
+    func cancel()
 }

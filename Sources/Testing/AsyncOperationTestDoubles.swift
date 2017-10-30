@@ -5,14 +5,20 @@
 import Result
 
 class AsyncOperationDummy<Input, Output, Tag>: TaggedAsyncOperation<Input, Output, Tag> {
-    override func execute(with input: Input, completion: @escaping (OperationResult<Output>) -> Void) { }
+    override func execute(with input: Input, completion: @escaping (OperationResult<Output>) -> Void) -> Execution? {
+        return nil
+    }
 }
 
 public class AsyncOperationSpy<Input, Output, Tag>: TaggedAsyncOperation<Input, Output, Tag> {
     public var inputs = [Input]()
 
-    override public func execute(with input: Input, completion: @escaping (OperationResult<Output>) -> Void) {
+    override public func execute(
+        with input: Input,
+        completion: @escaping (OperationResult<Output>) -> Void
+    ) -> Execution? {
         inputs.append(input)
+        return nil
     }
 }
 
@@ -23,8 +29,9 @@ class AsyncOperationThrowing<Input, Output, Tag>: TaggedAsyncOperation<Input, Ou
         self.error = error
     }
 
-    override func execute(with input: Input, completion: @escaping (OperationResult<Output>) -> Void) {
+    override func execute(with input: Input, completion: @escaping (OperationResult<Output>) -> Void) -> Execution? {
         completion(.failure(error: error))
+        return nil
     }
 }
 
@@ -35,8 +42,9 @@ class AsyncOperationReturning<Input, Output, Tag>: TaggedAsyncOperation<Input, O
         self.value = value
     }
 
-    override func execute(with input: Input, completion: @escaping (OperationResult<Output>) -> Void) {
+    override func execute(with input: Input, completion: @escaping (OperationResult<Output>) -> Void) -> Execution? {
         completion(.success(value))
+        return nil
     }
 }
 
@@ -48,9 +56,13 @@ public class AsyncOperationSpyReturning<Input, Output, Tag>: TaggedAsyncOperatio
         self.value = value
     }
 
-    override public func execute(with input: Input, completion: @escaping (OperationResult<Output>) -> Void) {
+    override public func execute(
+        with input: Input,
+        completion: @escaping (OperationResult<Output>) -> Void
+    ) -> Execution?  {
         inputs.append(input)
         completion(.success(value))
+        return nil
     }
 }
 

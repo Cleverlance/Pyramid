@@ -15,12 +15,16 @@ public class CommandAsyncOperation<Input, Output, AsyncTag, ReceiverTag>
         self.invoker = invoker
     }
 
-    public override func execute(with request: Input, completion: @escaping (OperationResult<Output>) -> Void) {
+    public override func execute(
+        with request: Input,
+        completion: @escaping (OperationResult<Output>) -> Void
+    ) -> Execution? {
         let command = Command(
             receiver: receiver,
             request: request,
             completion: completion
         )
         invoker.enqueue(command: command)
+        return nil // FIXME: Make this operation cancellable
     }
 }
