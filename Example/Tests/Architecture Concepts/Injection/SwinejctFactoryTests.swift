@@ -13,13 +13,13 @@ class SwinejctFactoryTests: QuickSpec {
         describe("registerFactory") {
             context("given registration with matching types") {
                 beforeEach {
-                    container.register(Int.self) { (_, _: Int) in 42 }
+                    container.register(String.self) { "\($0.resolve(Int.self)!)" }
                 }
 
                 it("should use given registration as factory implementation") {
-                    container.registerFactory(IntFactory.self)
-                    let factory = container.resolve(IntFactory.self)!
-                    expect(factory.make(for: 0)) == 42
+                    container.registerFactory(StringFactory.self)
+                    let factory = container.resolve(StringFactory.self)!
+                    expect(factory.make(for: 42)) == "42"
                 }
             }
         }
@@ -27,5 +27,5 @@ class SwinejctFactoryTests: QuickSpec {
 }
 
 private extension SwinejctFactoryTests {
-    typealias IntFactory = Factory<Int, Int>
+    typealias StringFactory = Factory<Int, String>
 }

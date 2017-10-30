@@ -21,6 +21,7 @@ private class SwinjectFactory<Input, Output, Tag>: TaggedFactory<Input, Output, 
     }
 
     override func make(for input: Input) -> Output {
-        return resolver.resolve(Output.self, argument: input)!
+        (resolver as! Container).register(Input.self) { _ in input }
+        return resolver.resolve(Output.self)!
     }
 }
