@@ -5,9 +5,9 @@
 public class Observer<Notification: Hashable> {
 
     let notification: Notification
-    let block: (Void) -> Void
+    let block: () -> Void
 
-    internal init(notificationName: Notification, block: @escaping (Void) -> Void ) {
+    internal init(notificationName: Notification, block: @escaping () -> Void ) {
         self.notification = notificationName
         self.block = block
     }

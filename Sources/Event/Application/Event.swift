@@ -3,6 +3,6 @@
 //
 
 public protocol Event {
-    func observe(_ block: @escaping (Void) -> Void) -> Observer<String>
+    func observe(_ block: @escaping () -> Void) -> Observer<String>
     func removeObserver(_ observer: Observer<String>)
 }

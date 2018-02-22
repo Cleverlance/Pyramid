@@ -14,7 +14,7 @@ open class Validator<Input, Model>: AbstractClass, ValidatorProtocol {
     open func isValid(_ input: Input) -> Bool { virtualMethod }
 }
 
-public func check(condition: (Void) -> Bool) throws {
+public func check(condition: () -> Bool) throws {
     if !condition() { throw InvalidModelError() }
 }
 
