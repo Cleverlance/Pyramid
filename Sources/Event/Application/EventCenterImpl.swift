@@ -6,7 +6,7 @@ public class EventCenterImpl: BaseNotificationCenterImpl<String>, Event, Fireabl
 
     public override init() {}
 
-    public func observe(_ block: @escaping (Void) -> Void) -> Observer<String> {
+    public func observe(_ block: @escaping () -> Void) -> Observer<String> {
         return registerObserverForNotification("", block: block)
     }
 

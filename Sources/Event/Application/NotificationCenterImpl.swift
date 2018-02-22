@@ -7,7 +7,7 @@ PostableNotificationCenter {
 
     public func addObserverForNotification(
         _ name: String,
-        block: @escaping (Void) -> Void
+        block: @escaping () -> Void
     ) -> Observer<String> {
         return registerObserverForNotification(name, block: block)
     }

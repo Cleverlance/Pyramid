@@ -9,7 +9,7 @@ public class BaseNotificationCenterImpl<Notification: Hashable> {
 
     internal func registerObserverForNotification(
         _ name: Notification,
-        block: @escaping (Void) -> Void
+        block: @escaping () -> Void
     ) -> Observer<Notification> {
 
         let observer = Observer(notificationName: name, block: block)
