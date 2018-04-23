@@ -12,5 +12,5 @@ public protocol PresenterHolder: MultiplePresenterHolder {
 }
 
 public extension PresenterHolder {
-    var presenters: [Presenter] { return [presenter].flatMap { $0 as? Presenter } }
+    var presenters: [Presenter] { return [presenter].compactMap { $0 as? Presenter } }
 }

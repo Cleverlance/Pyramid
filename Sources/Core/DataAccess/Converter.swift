@@ -25,7 +25,7 @@ extension ConverterProtocol {
 
     public func convertArrayIgnoreInvalid(_ inputs: [Input]?) -> [Output] {
         if let inputs = inputs {
-            return inputs.flatMap { try? convert($0) }
+            return inputs.compactMap { try? convert($0) }
         } else {
             return []
         }
