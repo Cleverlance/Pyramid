@@ -15,7 +15,7 @@ Basic concepts for iOS app architecture.
 
   spec.dependency 'Swinject', '~> 2.0'
   spec.dependency 'SwinjectAutoregistration'
-  spec.dependency 'ObjectMapper', '~> 2.0'
+  spec.dependency 'ObjectMapper', '~> 3.0'
   spec.dependency 'Result'
 
   spec.subspec 'AppVersion' do |subspec|
@@ -40,7 +40,7 @@ Basic concepts for iOS app architecture.
   end
 
   spec.subspec 'Core' do |subspec|
-    subspec.source_files = 'Sources/Core/**/*.swift'
+    subspec.source_files = 'Sources/Core/**/*.{swift,h,m}'
   end
 
   spec.subspec 'Event' do |subspec|
