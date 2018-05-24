@@ -9,19 +9,19 @@ extension Container {
     public func registerFactory<I, O, T>(_ type: TaggedFactory<I, O, T>.Type)
     -> ServiceEntry<TaggedFactory<I, O, T>> {
 
-        return register(type) { SwinjectFactory(resolver: $0) }
+        return register(type) { SwinjectFactory(container: $0 as! Container) }
     }
 }
 
 private class SwinjectFactory<Input, Output, Tag>: TaggedFactory<Input, Output, Tag> {
-    private let resolver: Resolver
+    private unowned var container: Container
 
-    init(resolver: Resolver) {
-        self.resolver = resolver
+    init(container: Container) {
+        self.container = container
     }
 
     override func make(for input: Input) -> Output {
-        (resolver as! Container).register(Input.self) { _ in input }
-        return resolver.resolve(Output.self)!
+        container.register(Input.self) { _ in input }
+        return container.resolve(Output.self)!
     }
 }

@@ -1,60 +1,60 @@
 PODS:
   - Nimble (7.1.1)
   - ObjectMapper (3.1.0)
-  - Pyramid (0.4.1):
+  - Pyramid (0.5.0):
     - ObjectMapper (~> 3.0)
-    - Pyramid/ApplicationScope (= 0.4.1)
-    - Pyramid/AppVersion (= 0.4.1)
-    - Pyramid/Builder (= 0.4.1)
-    - Pyramid/CommandPattern (= 0.4.1)
-    - Pyramid/Core (= 0.4.1)
-    - Pyramid/Event (= 0.4.1)
-    - Pyramid/Inactivity (= 0.4.1)
-    - Pyramid/Localizer (= 0.4.1)
-    - Pyramid/LocalStorage (= 0.4.1)
-    - Pyramid/ScopeManagement (= 0.4.1)
-    - Pyramid/Testing (= 0.4.1)
-    - Pyramid/Timer (= 0.4.1)
+    - Pyramid/ApplicationScope (= 0.5.0)
+    - Pyramid/AppVersion (= 0.5.0)
+    - Pyramid/Builder (= 0.5.0)
+    - Pyramid/CommandPattern (= 0.5.0)
+    - Pyramid/Core (= 0.5.0)
+    - Pyramid/Event (= 0.5.0)
+    - Pyramid/Inactivity (= 0.5.0)
+    - Pyramid/Localizer (= 0.5.0)
+    - Pyramid/LocalStorage (= 0.5.0)
+    - Pyramid/ScopeManagement (= 0.5.0)
+    - Pyramid/Testing (= 0.5.0)
+    - Pyramid/Timer (= 0.5.0)
     - Result
     - Swinject (~> 2.0)
     - SwinjectAutoregistration
-  - Pyramid/ApplicationScope (0.4.1):
+  - Pyramid/ApplicationScope (0.5.0):
     - ObjectMapper (~> 3.0)
     - Pyramid/Core
     - Pyramid/ScopeManagement
     - Result
     - Swinject (~> 2.0)
     - SwinjectAutoregistration
-  - Pyramid/AppVersion (0.4.1):
+  - Pyramid/AppVersion (0.5.0):
     - ObjectMapper (~> 3.0)
     - Pyramid/Core
     - Result
     - Swinject (~> 2.0)
     - SwinjectAutoregistration
-  - Pyramid/Builder (0.4.1):
+  - Pyramid/Builder (0.5.0):
     - ObjectMapper (~> 3.0)
     - Pyramid/Core
     - Result
     - Swinject (~> 2.0)
     - SwinjectAutoregistration
-  - Pyramid/CommandPattern (0.4.1):
+  - Pyramid/CommandPattern (0.5.0):
     - ObjectMapper (~> 3.0)
     - Pyramid/Core
     - Result
     - Swinject (~> 2.0)
     - SwinjectAutoregistration
-  - Pyramid/Core (0.4.1):
+  - Pyramid/Core (0.5.0):
     - ObjectMapper (~> 3.0)
     - Result
     - Swinject (~> 2.0)
     - SwinjectAutoregistration
-  - Pyramid/Event (0.4.1):
+  - Pyramid/Event (0.5.0):
     - ObjectMapper (~> 3.0)
     - Pyramid/Core
     - Result
     - Swinject (~> 2.0)
     - SwinjectAutoregistration
-  - Pyramid/Inactivity (0.4.1):
+  - Pyramid/Inactivity (0.5.0):
     - ObjectMapper (~> 3.0)
     - Pyramid/Core
     - Pyramid/Event
@@ -62,36 +62,36 @@ PODS:
     - Result
     - Swinject (~> 2.0)
     - SwinjectAutoregistration
-  - Pyramid/Localizer (0.4.1):
+  - Pyramid/Localizer (0.5.0):
     - ObjectMapper (~> 3.0)
     - Result
     - Swinject (~> 2.0)
     - SwinjectAutoregistration
-  - Pyramid/LocalStorage (0.4.1):
-    - ObjectMapper (~> 3.0)
-    - Pyramid/Core
-    - Result
-    - Swinject (~> 2.0)
-    - SwinjectAutoregistration
-  - Pyramid/ScopeManagement (0.4.1):
+  - Pyramid/LocalStorage (0.5.0):
     - ObjectMapper (~> 3.0)
     - Pyramid/Core
     - Result
     - Swinject (~> 2.0)
     - SwinjectAutoregistration
-  - Pyramid/Testing (0.4.1):
+  - Pyramid/ScopeManagement (0.5.0):
     - ObjectMapper (~> 3.0)
     - Pyramid/Core
     - Result
     - Swinject (~> 2.0)
     - SwinjectAutoregistration
-  - Pyramid/Timer (0.4.1):
+  - Pyramid/Testing (0.5.0):
+    - ObjectMapper (~> 3.0)
+    - Pyramid/Core
+    - Result
+    - Swinject (~> 2.0)
+    - SwinjectAutoregistration
+  - Pyramid/Timer (0.5.0):
     - ObjectMapper (~> 3.0)
     - Result
     - Swinject (~> 2.0)
     - SwinjectAutoregistration
   - Quick (1.3.0)
-  - Result (3.2.4)
+  - Result (4.0.0)
   - Swinject (2.4.0)
   - SwinjectAutoregistration (2.1.1):
     - Swinject (~> 2.1)
@@ -117,9 +117,9 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Nimble: 391f07782af4b37914f9bd7b2ffbb952731b8202
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
-  Pyramid: 4c4460c1fdbd03ed1851d8dfb2d79bde77fbda40
+  Pyramid: 590222ce948dbe8944d52bf0f63dee4488a32aa1
   Quick: 03278013f71aa05fe9ecabc94fbcc6835f1ee76f
-  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
   Swinject: a1364b0f66c2736bb03c1c7cab54809e16df25da
   SwinjectAutoregistration: d06b56bd8f912b9fb9c59c15181342558a734b1b
 
