@@ -20,8 +20,8 @@ public extension BaseBuilder {
     }
 }
 
-public extension ResultProtocol {
-    public func pack<R: ResultProtocol>(_ other: R, packedError: (Self.Error, Self.Error) -> Self.Error) -> Result<(Self.Value, R.Value), Self.Error> where R.Error == Self.Error {
+public extension Result {
+    public func pack<OtherValue>(_ other: Result<OtherValue, Error>, packedError: (Error, Error) -> Error) -> Result<(Value, OtherValue), Error> {
         return analysis(
             ifSuccess: { first in
                 other.analysis(
@@ -43,8 +43,8 @@ public protocol PackableError: Swift.Error {
     static func pack(_ first: Self, with second: Self) -> Self
 }
 
-public extension ResultProtocol where Error: PackableError {
-    public func pack<R: ResultProtocol>(_ other: R) -> Result<(Self.Value, R.Value), Self.Error> where R.Error == Self.Error {
+public extension Result where Error: PackableError {
+    public func pack<OtherValue>(_ other: Result<OtherValue, Error>) -> Result<(Value, OtherValue), Error> {
         return pack(other, packedError: Error.pack)
     }
 }
