@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name             = 'Pyramid'
-  spec.version          = '0.5.1'
+  spec.version          = '0.6.0'
   spec.summary          = 'Basic concepts for iOS app architecture'
   spec.description      = <<-DESC
 Basic concepts for iOS app architecture.
