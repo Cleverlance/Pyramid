@@ -12,6 +12,7 @@ Basic concepts for iOS app architecture.
   spec.source           = { :git => 'https://github.com/cleverlance/Pyramid.git', :tag => spec.version.to_s }
 
   spec.ios.deployment_target = '8.0'
+  spec.swift_version = '4.2'
 
   spec.dependency 'Swinject', '~> 2.0'
   spec.dependency 'SwinjectAutoregistration'
