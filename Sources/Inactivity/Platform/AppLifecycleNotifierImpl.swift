@@ -16,19 +16,19 @@ internal final class AppLifecycleNotifierImpl: AppLifecycleNotifier {
     init() {
         Foundation.NotificationCenter.default.addObserver(self,
             selector: #selector(AppLifecycleNotifierImpl.appDidBecomeActive),
-            name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
+            name: UIApplication.didBecomeActiveNotification, object: nil)
 
         Foundation.NotificationCenter.default.addObserver(self,
             selector: #selector(AppLifecycleNotifierImpl.appWillResignActive),
-            name: NSNotification.Name.UIApplicationWillResignActive, object: nil)
+            name: UIApplication.willResignActiveNotification, object: nil)
 
         Foundation.NotificationCenter.default.addObserver(self,
             selector: #selector(AppLifecycleNotifierImpl.appDidEnterBackground),
-            name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+            name: UIApplication.didEnterBackgroundNotification, object: nil)
 
         Foundation.NotificationCenter.default.addObserver(self,
             selector: #selector(AppLifecycleNotifierImpl.appWillEnterForeground),
-            name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
+            name: UIApplication.willEnterForegroundNotification, object: nil)
     }
 
     @objc private func appDidBecomeActive() {
