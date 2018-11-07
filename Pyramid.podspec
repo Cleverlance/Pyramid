@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name             = 'Pyramid'
-  spec.version          = '0.6.0'
+  spec.version          = '0.7.0'
   spec.summary          = 'Basic concepts for iOS app architecture'
   spec.description      = <<-DESC
 Basic concepts for iOS app architecture.
@@ -12,11 +12,27 @@ Basic concepts for iOS app architecture.
   spec.source           = { :git => 'https://github.com/cleverlance/Pyramid.git', :tag => spec.version.to_s }
 
   spec.ios.deployment_target = '8.0'
+  spec.watchos.deployment_target = '2.0'
+  spec.swift_version = '4.2'
 
   spec.dependency 'Swinject', '~> 2.0'
   spec.dependency 'SwinjectAutoregistration'
   spec.dependency 'ObjectMapper', '~> 3.0'
   spec.dependency 'Result'
+
+  spec.subspec 'WatchOS' do |subspec|
+    subspec.dependency 'Pyramid/AppVersion'
+    subspec.dependency 'Pyramid/ApplicationScope'
+    subspec.dependency 'Pyramid/Builder'
+    subspec.dependency 'Pyramid/CommandPattern'
+    subspec.dependency 'Pyramid/Core'
+    subspec.dependency 'Pyramid/Event'
+    subspec.dependency 'Pyramid/LocalStorage'
+    subspec.dependency 'Pyramid/Localizer'
+    subspec.dependency 'Pyramid/ScopeManagement'
+    subspec.dependency 'Pyramid/Timer'
+    subspec.dependency 'Pyramid/Testing'
+  end
 
   spec.subspec 'AppVersion' do |subspec|
     subspec.source_files = 'Sources/App Version/**/*.swift'
@@ -40,7 +56,7 @@ Basic concepts for iOS app architecture.
   end
 
   spec.subspec 'Core' do |subspec|
-    subspec.source_files = 'Sources/Core/**/*.{swift,h,m}'
+    subspec.source_files = 'Sources/Core/**/*.swift'
   end
 
   spec.subspec 'Event' do |subspec|
@@ -75,6 +91,11 @@ Basic concepts for iOS app architecture.
 
   spec.subspec 'Testing' do |subspec|
     subspec.source_files = 'Sources/Testing/**/*.swift'
+    subspec.dependency 'Pyramid/Core'
+  end
+
+  spec.subspec 'PresenterSupport' do |subspec|
+    subspec.source_files = 'Sources/Presenter Support iOS/**/*.{swift,h,m}'
     subspec.dependency 'Pyramid/Core'
   end
 end
