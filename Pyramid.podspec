@@ -94,7 +94,7 @@ Basic concepts for iOS app architecture.
     subspec.dependency 'Pyramid/Core'
   end
 
-  spec.subspec 'PresenterSupport' do |subspec|
+  spec.subspec 'PresenterSupportiOS' do |subspec|
     subspec.source_files = 'Sources/Presenter Support iOS/**/*.{swift,h,m}'
     subspec.dependency 'Pyramid/Core'
   end
