@@ -10,92 +10,16 @@ Basic concepts for iOS app architecture.
   spec.license          = { :type => 'MIT', :file => 'LICENSE' }
   spec.author           = { 'jakubvano' => 'jakub.vano@cleverlance.com' }
   spec.source           = { :git => 'https://github.com/cleverlance/Pyramid.git', :tag => spec.version.to_s }
+  spec.swift_version    = '4.2'
 
-  spec.ios.deployment_target = '8.0'
-  spec.watchos.deployment_target = '2.0'
-  spec.swift_version = '4.2'
+  spec.ios.deployment_target      = '8.0'
+  spec.watchos.deployment_target  = '2.0'
+
+  spec.source_files     = 'Sources/Common/**/*.{swift,h,m}'
+  spec.ios.source_files = 'Sources/iOS/**/*.{swift,h,m}'
 
   spec.dependency 'Swinject', '~> 2.0'
   spec.dependency 'SwinjectAutoregistration'
   spec.dependency 'ObjectMapper', '~> 3.0'
   spec.dependency 'Result'
-
-  spec.subspec 'WatchOS' do |subspec|
-    subspec.dependency 'Pyramid/AppVersion'
-    subspec.dependency 'Pyramid/ApplicationScope'
-    subspec.dependency 'Pyramid/Builder'
-    subspec.dependency 'Pyramid/CommandPattern'
-    subspec.dependency 'Pyramid/Core'
-    subspec.dependency 'Pyramid/Event'
-    subspec.dependency 'Pyramid/LocalStorage'
-    subspec.dependency 'Pyramid/Localizer'
-    subspec.dependency 'Pyramid/ScopeManagement'
-    subspec.dependency 'Pyramid/Timer'
-    subspec.dependency 'Pyramid/Testing'
-  end
-
-  spec.subspec 'AppVersion' do |subspec|
-    subspec.source_files = 'Sources/App Version/**/*.swift'
-    subspec.dependency 'Pyramid/Core'
-  end
-
-  spec.subspec 'ApplicationScope' do |subspec|
-    subspec.source_files = 'Sources/Application Scope/**/*.swift'
-    subspec.dependency 'Pyramid/Core'
-    subspec.dependency 'Pyramid/ScopeManagement'
-  end
-
-  spec.subspec 'Builder' do |subspec|
-    subspec.source_files = 'Sources/Builder/**/*.swift'
-    subspec.dependency 'Pyramid/Core'
-  end
-
-  spec.subspec 'CommandPattern' do |subspec|
-    subspec.source_files = 'Sources/Command Pattern/**/*.swift'
-    subspec.dependency 'Pyramid/Core'
-  end
-
-  spec.subspec 'Core' do |subspec|
-    subspec.source_files = 'Sources/Core/**/*.swift'
-  end
-
-  spec.subspec 'Event' do |subspec|
-    subspec.source_files = 'Sources/Event/**/*.swift'
-    subspec.dependency 'Pyramid/Core'
-  end
-
-  spec.subspec 'Inactivity' do |subspec|
-    subspec.source_files = 'Sources/Inactivity/**/*.swift'
-    subspec.dependency 'Pyramid/Core'
-    subspec.dependency 'Pyramid/Event'
-    subspec.dependency 'Pyramid/Timer'
-  end
-
-  spec.subspec 'LocalStorage' do |subspec|
-    subspec.source_files = 'Sources/Local Storage/**/*.swift'
-    subspec.dependency 'Pyramid/Core'
-  end
-
-  spec.subspec 'Localizer' do |subspec|
-    subspec.source_files = 'Sources/Localizer/**/*.swift'
-  end
-
-  spec.subspec 'ScopeManagement' do |subspec|
-    subspec.source_files = 'Sources/Scope Management/**/*.swift'
-    subspec.dependency 'Pyramid/Core'
-  end
-
-  spec.subspec 'Timer' do |subspec|
-    subspec.source_files = 'Sources/Timer/**/*.swift'
-  end
-
-  spec.subspec 'Testing' do |subspec|
-    subspec.source_files = 'Sources/Testing/**/*.swift'
-    subspec.dependency 'Pyramid/Core'
-  end
-
-  spec.subspec 'PresenterSupportiOS' do |subspec|
-    subspec.source_files = 'Sources/Presenter Support iOS/**/*.{swift,h,m}'
-    subspec.dependency 'Pyramid/Core'
-  end
 end

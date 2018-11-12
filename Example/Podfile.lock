@@ -1,91 +1,7 @@
 PODS:
   - Nimble (7.3.0)
   - ObjectMapper (3.3.0)
-  - Pyramid (0.5.1):
-    - ObjectMapper (~> 3.0)
-    - Pyramid/ApplicationScope (= 0.5.1)
-    - Pyramid/AppVersion (= 0.5.1)
-    - Pyramid/Builder (= 0.5.1)
-    - Pyramid/CommandPattern (= 0.5.1)
-    - Pyramid/Core (= 0.5.1)
-    - Pyramid/Event (= 0.5.1)
-    - Pyramid/Inactivity (= 0.5.1)
-    - Pyramid/Localizer (= 0.5.1)
-    - Pyramid/LocalStorage (= 0.5.1)
-    - Pyramid/ScopeManagement (= 0.5.1)
-    - Pyramid/Testing (= 0.5.1)
-    - Pyramid/Timer (= 0.5.1)
-    - Result
-    - Swinject (~> 2.0)
-    - SwinjectAutoregistration
-  - Pyramid/ApplicationScope (0.5.1):
-    - ObjectMapper (~> 3.0)
-    - Pyramid/Core
-    - Pyramid/ScopeManagement
-    - Result
-    - Swinject (~> 2.0)
-    - SwinjectAutoregistration
-  - Pyramid/AppVersion (0.5.1):
-    - ObjectMapper (~> 3.0)
-    - Pyramid/Core
-    - Result
-    - Swinject (~> 2.0)
-    - SwinjectAutoregistration
-  - Pyramid/Builder (0.5.1):
-    - ObjectMapper (~> 3.0)
-    - Pyramid/Core
-    - Result
-    - Swinject (~> 2.0)
-    - SwinjectAutoregistration
-  - Pyramid/CommandPattern (0.5.1):
-    - ObjectMapper (~> 3.0)
-    - Pyramid/Core
-    - Result
-    - Swinject (~> 2.0)
-    - SwinjectAutoregistration
-  - Pyramid/Core (0.5.1):
-    - ObjectMapper (~> 3.0)
-    - Result
-    - Swinject (~> 2.0)
-    - SwinjectAutoregistration
-  - Pyramid/Event (0.5.1):
-    - ObjectMapper (~> 3.0)
-    - Pyramid/Core
-    - Result
-    - Swinject (~> 2.0)
-    - SwinjectAutoregistration
-  - Pyramid/Inactivity (0.5.1):
-    - ObjectMapper (~> 3.0)
-    - Pyramid/Core
-    - Pyramid/Event
-    - Pyramid/Timer
-    - Result
-    - Swinject (~> 2.0)
-    - SwinjectAutoregistration
-  - Pyramid/Localizer (0.5.1):
-    - ObjectMapper (~> 3.0)
-    - Result
-    - Swinject (~> 2.0)
-    - SwinjectAutoregistration
-  - Pyramid/LocalStorage (0.5.1):
-    - ObjectMapper (~> 3.0)
-    - Pyramid/Core
-    - Result
-    - Swinject (~> 2.0)
-    - SwinjectAutoregistration
-  - Pyramid/ScopeManagement (0.5.1):
-    - ObjectMapper (~> 3.0)
-    - Pyramid/Core
-    - Result
-    - Swinject (~> 2.0)
-    - SwinjectAutoregistration
-  - Pyramid/Testing (0.5.1):
-    - ObjectMapper (~> 3.0)
-    - Pyramid/Core
-    - Result
-    - Swinject (~> 2.0)
-    - SwinjectAutoregistration
-  - Pyramid/Timer (0.5.1):
+  - Pyramid (0.7.0):
     - ObjectMapper (~> 3.0)
     - Result
     - Swinject (~> 2.0)
@@ -117,7 +33,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Nimble: c8d6a1f463701921c46de965c673e13cafa09196
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
-  Pyramid: 3e7ce3f32dd640892cbaf987df1ce47060bf7bfa
+  Pyramid: 84bac162f1bdaee493ae9f2e25907ef8ed75a816
   Quick: d17304d58d0d169dd0bd1c6e5c28e3318de32a1a
   Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
   Swinject: 82cdb851f63f91bba974e3eca1d69780f2f7677e

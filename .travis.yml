@@ -7,11 +7,15 @@ git:
   submodules: false
 matrix:
   include:
+    - env: JOB="POD_LINT"
+      script: 
+        - pod lib lint
+
     - env: JOB="XCODE" DEST="OS=9.3,name=iPhone 6" SCHEME="Pyramid-Example" SDK="iphonesimulator" ACTION="test"
-script:
-  - cd Example && pod update
-  - set -o pipefail
-  - xcodebuild "$ACTION" -workspace "Pyramid.xcworkspace" -scheme "$SCHEME" -sdk "$SDK" -destination "$DEST" -configuration Release ENABLE_TESTABILITY=YES | xcpretty
+      script:
+        - cd Example && pod update
+        - set -o pipefail
+        - xcodebuild "$ACTION" -workspace "Pyramid.xcworkspace" -scheme "$SCHEME" -sdk "$SDK" -destination "$DEST" -configuration Release ENABLE_TESTABILITY=YES | xcpretty
 notifications:
   email:
     on_success: never
