@@ -18,8 +18,8 @@ Basic concepts for iOS app architecture.
   spec.source_files     = 'Sources/Common/**/*.{swift,h,m}'
   spec.ios.source_files = 'Sources/iOS/**/*.{swift,h,m}'
 
-  spec.dependency 'Swinject', '~> 2.0'
+  spec.dependency 'Swinject'
   spec.dependency 'SwinjectAutoregistration'
-  spec.dependency 'ObjectMapper', '~> 3.0'
+  spec.dependency 'KeychainAccess'
   spec.dependency 'Result'
 end
