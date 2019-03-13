@@ -18,3 +18,10 @@ public extension Resolver {
         _ = resolve(type)
     }
 }
+
+extension Container {
+    public func registerValueWrapperConverters<T: ValueWrapper>(for type: T.Type) where T.Value: Codable {
+        autoregister(Converter<WrapperDto<T.Value>, T>.self, initializer: ValueWrapperDomainConverterImpl<T>.init)
+        autoregister(Converter<T, WrapperDto<T.Value>>.self, initializer: ValueWrapperExternalConverterImpl<T>.init)
+    }
+}
