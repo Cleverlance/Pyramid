@@ -5,9 +5,10 @@
 import Swinject
 import SwinjectAutoregistration
 
-final class DeviceStorageAssembly: Assembly {
+public final class DeviceStorageAssembly: Assembly {
+    public init() {}
 
-    func assemble(container: Container) {
+    public func assemble(container: Container) {
         container.autoregister(DeviceStore.self, initializer: DeviceStoreImpl.init)
             .inObjectScope(.container)
 
