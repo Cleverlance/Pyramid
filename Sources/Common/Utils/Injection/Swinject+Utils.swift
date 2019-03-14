@@ -5,6 +5,7 @@
 import Swinject
 
 extension Container {
+    @discardableResult
     public func registerListConverter<ItemConverter: ConverterProtocol>(
         for itemConverterType: ItemConverter.Type
     ) -> ServiceEntry<ListConverter<ItemConverter>> {
