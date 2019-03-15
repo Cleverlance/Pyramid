@@ -9,6 +9,6 @@ public final class UtilsAssembly: Assembly {
 
     public func assemble(container: Container) {
         container.autoregister(EmptyExternalConverter.self, initializer: EmptyExternalConverterImpl.init)
-        container.autoregister(EmptyDomainConverter.self, initializer: EmptyDomainConverter.init)
+        container.autoregister(EmptyDomainConverter.self, initializer: EmptyDomainConverterImpl.init)
     }
 }
