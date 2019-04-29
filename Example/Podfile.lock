@@ -1,16 +1,16 @@
 PODS:
-  - KeychainAccess (3.1.2)
-  - Nimble (7.3.0)
-  - Pyramid (0.7.0):
+  - KeychainAccess (3.2.0)
+  - Nimble (8.0.1)
+  - Pyramid (0.8.2):
     - KeychainAccess
     - Result
     - Swinject
     - SwinjectAutoregistration
-  - Quick (1.3.1)
-  - Result (4.0.0)
-  - Swinject (2.5.0)
-  - SwinjectAutoregistration (2.1.1):
-    - Swinject (~> 2.1)
+  - Quick (2.1.0)
+  - Result (4.1.0)
+  - Swinject (2.6.0)
+  - SwinjectAutoregistration (2.6.0):
+    - Swinject (~> 2.6)
 
 DEPENDENCIES:
   - Nimble
@@ -31,13 +31,13 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  KeychainAccess: b3816fddcf28aa29d94b10ec305cd52be14c472b
-  Nimble: c8d6a1f463701921c46de965c673e13cafa09196
-  Pyramid: dbc8592b07a874600dd59a38fa6ffe0c6c272410
-  Quick: d17304d58d0d169dd0bd1c6e5c28e3318de32a1a
-  Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
-  Swinject: 82cdb851f63f91bba974e3eca1d69780f2f7677e
-  SwinjectAutoregistration: d06b56bd8f912b9fb9c59c15181342558a734b1b
+  KeychainAccess: 3b1bf8a77eb4c6ea1ce9404c292e48f948954c6b
+  Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
+  Pyramid: d34d4b1532dd1498bcb9c0e3633549ec4945f575
+  Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  Swinject: 48a96cda93633cf2860697b4ce76ab5db9ebaca2
+  SwinjectAutoregistration: 93a908f7543c401b0c315305ac0ae501efdbce89
 
 PODFILE CHECKSUM: 5c6d9d8795e096a3624db984daee459bfb04236a
 

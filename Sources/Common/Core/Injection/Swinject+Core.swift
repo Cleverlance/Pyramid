@@ -12,7 +12,7 @@ extension Container {
     }
 }
 
-public extension Resolver {
+extension Resolver {
 
     public func ensureSingletonLoaded<T>(type: T.Type) {
         _ = resolve(type)

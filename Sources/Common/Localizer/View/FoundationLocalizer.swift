@@ -13,7 +13,7 @@ public final class FoundationLocalizer: Localizer {
     }
 }
 
-private let foundationLocalizer = FoundationLocalizer()
+public var implicitLocalizer: Localizer = FoundationLocalizer()
 public func localize(_ key: String) -> String {
-    return foundationLocalizer.localize(key)
+    return implicitLocalizer.localize(key)
 }
