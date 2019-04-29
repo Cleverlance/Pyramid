@@ -6,7 +6,7 @@ import Result
 
 public protocol BaseBuilder {}
 
-public extension BaseBuilder {
+extension BaseBuilder {
     public func any<T, E: Swift.Error>(_ value: T) -> Result<T, E> {
         return .success(value)
     }
@@ -20,7 +20,7 @@ public extension BaseBuilder {
     }
 }
 
-public extension Result {
+extension Result {
     public func pack<OtherValue>(_ other: Result<OtherValue, Error>, packedError: (Error, Error) -> Error) -> Result<(Value, OtherValue), Error> {
         return analysis(
             ifSuccess: { first in
@@ -43,7 +43,7 @@ public protocol PackableError: Swift.Error {
     static func pack(_ first: Self, with second: Self) -> Self
 }
 
-public extension Result where Error: PackableError {
+extension Result where Error: PackableError {
     public func pack<OtherValue>(_ other: Result<OtherValue, Error>) -> Result<(Value, OtherValue), Error> {
         return pack(other, packedError: Error.pack)
     }
