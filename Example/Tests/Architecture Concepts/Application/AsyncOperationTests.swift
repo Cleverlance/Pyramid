@@ -19,7 +19,7 @@ class AsyncOperationTests: XCTestCase {
 
         Operation.execute { result = $0 }
 
-        expect(result?.value) == 42
+        expect(try? result?.get()) == 42
     }
 
     func test_Execute_GivenNoInputAsyncOperationCompletingWithError_ItShouldCompleteWithError() {
@@ -28,7 +28,7 @@ class AsyncOperationTests: XCTestCase {
 
         Operation.execute { result = $0 }
 
-        expect(result?.error).notTo(beNil())
+        expect { try result?.get() }.to(throwError())
     }
 }
 

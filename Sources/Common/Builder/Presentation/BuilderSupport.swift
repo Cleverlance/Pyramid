@@ -2,8 +2,6 @@
 //  Copyright © 2016 Cleverlance. All rights reserved.
 //
 
-import Result
-
 public protocol BaseBuilder {}
 
 extension BaseBuilder {
@@ -21,21 +19,13 @@ extension BaseBuilder {
 }
 
 extension Result {
-    public func pack<OtherValue>(_ other: Result<OtherValue, Error>, packedError: (Error, Error) -> Error) -> Result<(Value, OtherValue), Error> {
-        return analysis(
-            ifSuccess: { first in
-                other.analysis(
-                    ifSuccess: { .success((first, $0)) },
-                    ifFailure: { .failure($0) }
-                )
-            },
-            ifFailure: { first in
-                other.analysis(
-                    ifSuccess: { _ in .failure(first) },
-                    ifFailure: { .failure(packedError(first, $0)) }
-                )
-            }
-        )
+    public func pack<OtherValue>(_ other: Result<OtherValue, Failure>, packedError: (Failure, Failure) -> Failure) -> Result<(Success, OtherValue), Failure> {
+        switch (self, other) {
+        case let (.success(this), .success(other)): return .success((this, other))
+        case let (.failure(this), .failure(other)): return .failure(packedError(this, other))
+        case let (.success, .failure(error)): return .failure(error)
+        case let (.failure(error), .success): return .failure(error)
+        }
     }
 }
 
@@ -43,8 +33,8 @@ public protocol PackableError: Swift.Error {
     static func pack(_ first: Self, with second: Self) -> Self
 }
 
-extension Result where Error: PackableError {
-    public func pack<OtherValue>(_ other: Result<OtherValue, Error>) -> Result<(Value, OtherValue), Error> {
-        return pack(other, packedError: Error.pack)
+extension Result where Failure: PackableError {
+    public func pack<OtherValue>(_ other: Result<OtherValue, Failure>) -> Result<(Success, OtherValue), Failure> {
+        return pack(other, packedError: Failure.pack)
     }
 }

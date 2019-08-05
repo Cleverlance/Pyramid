@@ -17,7 +17,7 @@ internal final class BackgroundExecutor: Executor {
                 let response = try command.execute()
                 completion(.success(response))
             } catch {
-                completion(.failure(error: error))
+                completion(.failure(error))
             }
         }
     }
