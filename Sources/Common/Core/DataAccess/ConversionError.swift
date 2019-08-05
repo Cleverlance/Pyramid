@@ -3,8 +3,8 @@
 //
 
 public struct ConversionError: Error {
-    let file: String
-    let line: Int
+    public let file: String
+    public let line: Int
 
     public init(file: String = #file, line: Int = #line) {
         self.file = file
