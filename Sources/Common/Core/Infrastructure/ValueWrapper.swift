@@ -10,7 +10,9 @@ public protocol ThrowingValueWrapper: Hashable {
 }
 
 extension ThrowingValueWrapper {
-    public var hashValue: Int { return value.hashValue }
+    public func hash(into hasher: inout Hasher) {
+        value.hash(into: &hasher)
+    }
 }
 
 public func == <T: ThrowingValueWrapper>(lhs: T, rhs: T) -> Bool {
