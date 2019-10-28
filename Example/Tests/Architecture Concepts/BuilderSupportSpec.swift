@@ -3,7 +3,6 @@
 import Quick
 import Nimble
 import Pyramid
-import Result
 
 class BuilderSupportSpec: QuickSpec {
     override func spec() {

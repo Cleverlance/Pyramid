@@ -1,13 +1,11 @@
 PODS:
   - KeychainAccess (3.2.0)
   - Nimble (8.0.1)
-  - Pyramid (0.8.2):
+  - Pyramid (1.0.0):
     - KeychainAccess
-    - Result
     - Swinject
     - SwinjectAutoregistration
   - Quick (2.1.0)
-  - Result (4.1.0)
   - Swinject (2.6.0)
   - SwinjectAutoregistration (2.6.0):
     - Swinject (~> 2.6)
@@ -18,11 +16,10 @@ DEPENDENCIES:
   - Quick
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - KeychainAccess
     - Nimble
     - Quick
-    - Result
     - Swinject
     - SwinjectAutoregistration
 
@@ -33,12 +30,11 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   KeychainAccess: 3b1bf8a77eb4c6ea1ce9404c292e48f948954c6b
   Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
-  Pyramid: d34d4b1532dd1498bcb9c0e3633549ec4945f575
+  Pyramid: e56f0b52f0dfeb10cc3e24559f2fdd5912a5de60
   Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
-  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   Swinject: 48a96cda93633cf2860697b4ce76ab5db9ebaca2
   SwinjectAutoregistration: 93a908f7543c401b0c315305ac0ae501efdbce89
 
 PODFILE CHECKSUM: 5c6d9d8795e096a3624db984daee459bfb04236a
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.8.3

@@ -2,8 +2,6 @@
 //  Copyright © 2016 Cleverlance. All rights reserved.
 //
 
-import Result
-
 class AsyncOperationDummy<Input, Output, Tag>: TaggedAsyncOperation<Input, Output, Tag> {
     override func execute(with input: Input, completion: @escaping (OperationResult<Output>) -> Void) -> Execution? {
         return nil
@@ -30,7 +28,7 @@ class AsyncOperationThrowing<Input, Output, Tag>: TaggedAsyncOperation<Input, Ou
     }
 
     override func execute(with input: Input, completion: @escaping (OperationResult<Output>) -> Void) -> Execution? {
-        completion(.failure(error: error))
+        completion(.failure(error))
         return nil
     }
 }

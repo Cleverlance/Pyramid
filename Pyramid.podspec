@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name             = 'Pyramid'
-  spec.version          = '0.8.4'
+  spec.version          = '1.0.0'
   spec.summary          = 'Basic concepts for iOS app architecture'
   spec.description      = <<-DESC
 Basic concepts for iOS app architecture.
@@ -21,5 +21,4 @@ Basic concepts for iOS app architecture.
   spec.dependency 'Swinject'
   spec.dependency 'SwinjectAutoregistration'
   spec.dependency 'KeychainAccess'
-  spec.dependency 'Result'
 end
