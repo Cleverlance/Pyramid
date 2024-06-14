@@ -17,8 +17,11 @@ public protocol AsyncOperationProtocol {
     @discardableResult
     func execute(with input: Input, completion: @escaping (OperationResult<Output>) -> Void) -> Execution?
 
+    #if compiler(>=5.5)
+    @available(iOS 13.0, *)
     @discardableResult
     func execute(with input: Input) async throws -> Output
+    #endif
 }
 
 extension AsyncOperationProtocol where Input == Empty {
@@ -27,10 +30,13 @@ extension AsyncOperationProtocol where Input == Empty {
         return execute(with: Empty(), completion: completion)
     }
 
+    #if compiler(>=5.5)
+    @available(iOS 13.0, *)
     @discardableResult
     public func execute() async throws -> Output {
         return try await execute(with: Empty())
     }
+    #endif
 }
 
 public typealias AsyncOperation<Input, Output> = TaggedAsyncOperation<Input, Output, Void>
@@ -43,40 +49,46 @@ open class TaggedAsyncOperation<Input, Output, Tag>: AbstractClass, AsyncOperati
         virtualMethod
     }
 
+    #if compiler(>=5.5)
+    @available(iOS 13.0, *)
     @discardableResult
     public func execute(with input: Input) async throws -> Output {
-        if #available(iOS 13.0, *) {
-            return try await withCheckedThrowingContinuation { continuation in
-                execute(with: input) { result in
-                    switch result {
-                    case .success(let output): continuation.resume(returning: output)
-                    case .failure(let error): continuation.resume(throwing: error)
-                    }
+        return try await withCheckedThrowingContinuation { continuation in
+            execute(with: input) { result in
+                switch result {
+                case .success(let output):
+                    continuation.resume(returning: output)
+                case .failure(let error):
+                    continuation.resume(throwing: error)
                 }
             }
-        } else {
-            return try await executeAsyncWithSemaphore(input: input)
         }
     }
 
+    @available(iOS 13.0, *)
     private func executeAsyncWithSemaphore(input: Input) async throws -> Output {
-        let semaphore = DispatchSemaphore(value: 0)
-        var result: OperationResult<Output>?
+        try await withCheckedThrowingContinuation { continuation in
+            let semaphore = DispatchSemaphore(value: 0)
+            var result: OperationResult<Output>?
 
-        execute(with: input) { operationResult in
-            result = operationResult
-            semaphore.signal()
-        }
-
-        semaphore.wait()
-
-        if let result = result {
-            switch result {
-            case .success(let output): return output
-            case .failure(let error): throw error
+            execute(with: input) { operationResult in
+                result = operationResult
+                semaphore.signal()
             }
-        } else {
-            throw AsyncOperationError.executionFailed
+
+            semaphore.wait()
+
+            if let result = result {
+                switch result {
+                case .success(let output):
+                    continuation.resume(returning: output)
+                case .failure(let error):
+                    continuation.resume(throwing: error)
+                }
+            } else {
+                continuation.resume(throwing: AsyncOperationError.executionFailed)
+            }
         }
     }
+    #endif
 }
